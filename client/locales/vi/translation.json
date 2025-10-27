@@ -1,0 +1,280 @@
+{
+  "nav": {
+    "about": "Giới thiệu",
+    "features": "Tính năng",
+    "pricing": "Bảng giá",
+    "documentation": "Tài liệu",
+    "contact": "Liên hệ",
+    "joinNow": "Tham gia ngay"
+  },
+  "auth": {
+    "loginRegister": "Đăng ký / Đăng nhập"
+  },
+  "common": {
+    "education": "Học vấn",
+    "experience": "Kinh nghiệm", 
+    "role": "Vai trò",
+    "language": "Ngôn ngữ",
+    "theme": "Giao diện",
+    "lightMode": "Sáng",
+    "darkMode": "Tối"
+  },
+  "hero": {
+    "title": "AgroConnect – Thúc đẩy Nông nghiệp Bền vững",
+    "subtitle": "Cầu nối số kết nối nông dân, hợp tác xã và doanh nghiệp thông qua minh bạch ESG và blockchain.",
+    "tagline": "Từ Trang trại đến Tương lai.",
+    "joinButton": "Tham gia AgroConnect",
+    "exploreButton": "Khám phá Nền tảng"
+  },
+  "about": {
+    "title": "Về AgroConnect",
+    "subtitle": "Đội ngũ tài năng đang xây dựng tương lai nông nghiệp bền vững",
+    "backToHome": "Về trang chủ",
+    "mission": {
+      "title": "Sứ mệnh của chúng tôi",
+      "subtitle": "Nông nghiệp bền vững",
+      "description1": "AgroConnect kết nối nông dân, hợp tác xã, doanh nghiệp và người tiêu dùng. Chúng tôi cải thiện thu nhập nông dân, xác minh tuân thủ ESG cho doanh nghiệp, và trao quyền cho người tiêu dùng đưa ra quyết định mua sắm có trách nhiệm thông qua chuỗi cung ứng minh bạch, được xác minh bằng blockchain.",
+      "description2": "Nền tảng của chúng tôi kết hợp công nghệ tiên tiến với cam kết thực sự về phát triển nông nghiệp bền vững, tạo ra tác động tích cực lâu dài trên toàn bộ chuỗi giá trị."
+    },
+    "team": {
+      "title": "Đội ngũ của chúng tôi",
+      "subtitle": "Những con người tài năng đang xây dựng tương lai nông nghiệp bền vững",
+      "members": {
+        "ceo": {
+          "name": "Nguyễn Văn Nhật",
+          "position": "Giám đốc Điều hành (CEO)",
+          "education": "Sinh viên ngành Kỹ thuật phần mềm, có kiến thức nền vững chắc về hệ thống phần mềm và mô hình doanh nghiệp số.",
+          "experience": "Dẫn dắt nhiều dự án nhóm về khởi nghiệp, từng phụ trách vai trò quản lý nhóm kỹ thuật trong các bài tập lớn tại trường.",
+          "role": "Điều phối toàn bộ hoạt động dự án; xây dựng chiến lược phát triển, kết nối đối tác nông nghiệp, hợp tác với tổ chức ESG và nhà đầu tư tiềm năng."
+        },
+        "cto": {
+          "name": "Trịnh Như Nhật",
+          "position": "Giám đốc Công nghệ (CTO)",
+          "education": "Sinh viên Khoa học máy tính, am hiểu các công nghệ web, cơ sở dữ liệu và bảo mật thông tin.",
+          "experience": "Phát triển ứng dụng web, triển khai API và thiết kế kiến trúc hệ thống.",
+          "role": "Dẫn dắt nhóm kỹ thuật xây dựng nền tảng AgroConnect, đảm bảo hiệu năng, tính bảo mật và khả năng mở rộng của hệ thống."
+        },
+        "cfo": {
+          "name": "Dương Thị Minh Nguyệt",
+          "position": "Giám đốc Tài chính (CFO)",
+          "education": "Sinh viên chuyên ngành Tài chính - Kế toán",
+          "experience": "Có hiểu biết về kế toán – tài chính cơ bản, từng phụ trách phần lập kế hoạch tài chính",
+          "role": "Quản lý ngân sách, lập kế hoạch tài chính, kiểm soát chi phí và đảm bảo tính minh bạch trong mọi hoạt động tài chính của dự án."
+        },
+        "cmo": {
+          "name": "Nguyễn Thị Thảo Nguyên",
+          "position": "Giám đốc Marketing (CMO)",
+          "education": "Sinh viên chuyên ngành Marketing",
+          "experience": "Tham gia các chiến dịch truyền thông sinh viên, có kỹ năng xây dựng nội dung và quảng bá hình ảnh.",
+          "role": "Xây dựng chiến lược truyền thông, phát triển thương hiệu AgroConnect, quản lý các kênh marketing số (Facebook, TikTok, website và bản tin nông nghiệp)."
+        },
+        "coo": {
+          "name": "Đặng Xuân Diệu Nhi",
+          "position": "Giám đốc Vận hành (COO)",
+          "education": "Sinh viên chuyên ngành Quản trị Kinh doanh",
+          "experience": "Có kinh nghiệm làm việc trong các dự án cộng đồng, hiểu quy trình vận hành thực địa.",
+          "role": "Quản lý hoạt động vận hành thực địa, điều phối đội ngũ hỗ trợ nông dân, giám sát các chuỗi kết nối sản phẩm và quy trình kiểm định chất lượng."
+        },
+        "clo": {
+          "name": "Nguyễn Hạnh Nhi",
+          "position": "Giám đốc Pháp lý (CLO)",
+          "education": "Sinh viên chuyên ngành Luật",
+          "experience": "Nắm vững kiến thức cơ bản về pháp luật dân sự và thương mại.",
+          "role": "Phụ trách pháp chế, đảm bảo dự án tuân thủ quy định về thương mại điện tử, quyền sở hữu trí tuệ và pháp luật nông nghiệp."
+        },
+        "chro": {
+          "name": "Trần Minh Nguyệt",
+          "position": "Giám đốc Nhân sự (CHRO)",
+          "education": "Sinh viên chuyên ngành Quản trị Nhân sự",
+          "experience": "Có kinh nghiệm tổ chức hoạt động nhóm, kỹ năng giao tiếp và tạo động lực.",
+          "role": "Xây dựng chính sách nhân sự, quản lý tuyển dụng, phát triển đội ngũ và lan toả văn hoá doanh nghiệp \"Kết nối – Trung thực – Bền vững\"."
+        },
+        "rdLead": {
+          "name": "Trần Văn Nhật",
+          "position": "Trưởng nhóm Nghiên cứu & Phát triển (R&D Lead)",
+          "education": "Sinh viên ngành Khoa học máy tính.",
+          "experience": "Tham gia phát triển phần mềm mô phỏng, có kinh nghiệm làm việc nhóm trong các đề tài nghiên cứu ứng dụng công nghệ mới.",
+          "role": "Nghiên cứu các mô hình canh tác thông minh, phân tích dữ liệu chuỗi cung ứng và đề xuất giải pháp công nghệ hỗ trợ nông dân nâng cao năng suất."
+        },
+        "externalLead": {
+          "name": "Nguyễn Thị Hồng Nhung",
+          "position": "Trưởng nhóm Đối ngoại & Hợp tác (External Relations Lead)",
+          "education": "Sinh viên chuyên ngành Quan hệ Quốc tế",
+          "experience": "Từng tham gia các dự án hợp tác sinh viên – doanh nghiệp, có kỹ năng giao tiếp và thuyết trình.",
+          "role": "Thiết lập quan hệ hợp tác với doanh nghiệp thu mua, tổ chức nông nghiệp, và kết nối với các chương trình phát triển nông thôn của chính phủ."
+        },
+        "internationalLead": {
+          "name": "Trần Mỹ Nhung",
+          "position": "Trưởng nhóm Phát triển Thị trường Quốc tế (International Development Lead)",
+          "education": "Sinh viên chuyên ngành Kinh tế Quốc tế",
+          "experience": "Có hiểu biết về thị trường ASEAN và thương mại xuyên biên giới.",
+          "role": "Phụ trách nghiên cứu thị trường quốc tế, kết nối với các đối tác khu vực ASEAN, tìm kiếm cơ hội xuất khẩu nông sản và hợp tác chuyển giao công nghệ xanh."
+        }
+      }
+    },
+    "values": {
+      "title": "Giá trị cốt lõi",
+      "connect": {
+        "title": "Kết nối",
+        "description": "Tạo ra mạng lưới kết nối mạnh mẽ giữa nông dân, doanh nghiệp và người tiêu dùng"
+      },
+      "honest": {
+        "title": "Trung thực",
+        "description": "Đảm bảo tính minh bạch và trung thực trong mọi hoạt động kinh doanh"
+      },
+      "sustainable": {
+        "title": "Bền vững",
+        "description": "Cam kết phát triển nông nghiệp bền vững và bảo vệ môi trường"
+      }
+    },
+    "cta": {
+      "title": "Tham gia cùng chúng tôi",
+      "subtitle": "Cùng nhau xây dựng tương lai nông nghiệp bền vững",
+      "button": "Khám phá nền tảng"
+    }
+  },
+  "aboutUs": {
+    "title": "Về chúng tôi",
+    "description": "Đội ngũ tài năng với 10 thành viên chuyên nghiệp, đang xây dựng tương lai nông nghiệp bền vững thông qua công nghệ blockchain và minh bạch ESG.",
+    "learnMore": "Tìm hiểu thêm",
+    "meetTeam": "Gặp gỡ đội ngũ",
+    "teamCount": "10 Thành viên",
+    "teamDescription": "Đội ngũ chuyên nghiệp"
+  },
+  "features": {
+    "title": "Tính năng Cốt lõi",
+    "app": {
+      "title": "Ứng dụng/Web AgroConnect",
+      "description": "Nông dân và hợp tác xã đăng ký, tải lên dữ liệu canh tác và được kết nối với người mua đã xác minh."
+    },
+    "blockchain": {
+      "title": "Truy xuất nguồn gốc Blockchain",
+      "description": "Mỗi sản phẩm có mã QR bảo mật lưu trữ thông tin trang trại, dữ liệu ESG và lịch sử logistics."
+    },
+    "esg": {
+      "title": "Hệ thống Chấm điểm ESG",
+      "description": "Chấm điểm tự động theo tiêu chí Môi trường, Xã hội, Quản trị — được xác minh bởi chuyên gia."
+    },
+    "data": {
+      "title": "Cổng Dữ liệu & Học tập",
+      "description": "Giá cây trồng thời gian thực, phân tích thời tiết và đào tạo trực tuyến về nông nghiệp xanh."
+    }
+  },
+  "howItWorks": {
+    "title": "Cách thức Hoạt động",
+    "step1": {
+      "title": "Sản xuất",
+      "description": "Nông dân cập nhật cây trồng & chứng nhận"
+    },
+    "step2": {
+      "title": "Đối tác",
+      "description": "Doanh nghiệp đăng nhu cầu, hệ thống kết nối qua AI"
+    },
+    "step3": {
+      "title": "Mua sắm",
+      "description": "Người tiêu dùng quét QR để xem toàn bộ hành trình 'Từ Trang trại đến Bàn ăn'"
+    }
+  },
+  "impact": {
+    "title": "Thúc đẩy Tác động Tích cực",
+    "income": {
+      "value": "20%",
+      "label": "Tăng trưởng Thu nhập Nông dân"
+    },
+    "consumers": {
+      "value": "68%",
+      "label": "Người tiêu dùng Sẵn sàng Trả thêm"
+    },
+    "blockchain": {
+      "value": "100%",
+      "label": "Chuỗi được Xác minh Blockchain"
+    }
+  },
+  "pricing": {
+    "title": "Bảng giá dịch vụ AgroConnect",
+    "farmerSection": "Nông dân / Hộ sản xuất",
+    "businessSection": "Doanh nghiệp / Hợp tác xã",
+    "free": {
+      "name": "Gói Miễn phí (Free)",
+      "price": "0đ",
+      "features": ["Đăng ký cơ bản", "Tạo hồ sơ", "Xem giá thị trường"]
+    },
+    "pro": {
+      "name": "Gói Nâng cao (Pro)",
+      "price": "99.000đ",
+      "features": ["Gợi ý đối tác", "Phân tích năng suất", "Quản lý mùa vụ"],
+      "popular": "Phổ biến"
+    },
+    "enterprise": {
+      "name": "Gói Doanh nghiệp (Enterprise)",
+      "price": "499.000đ",
+      "features": ["Quản lý danh mục", "Quảng bá thương hiệu", "Phân tích xu hướng"]
+    },
+    "premium": {
+      "name": "Gói Cao cấp (Premium)",
+      "price": "1.000.000đ",
+      "features": ["Tích hợp API truy xuất", "Quảng cáo nổi bật", "Hỗ trợ kỹ thuật ưu tiên"]
+    },
+    "monthly": "/tháng",
+    "subscribeNow": "Đăng ký ngay",
+    "startFree": "Bắt đầu miễn phí",
+    "contactUs": "Liên hệ ngay"
+  },
+  "testimonials": {
+    "title": "Được tin tưởng bởi Người trồng, Xác minh bởi Đối tác",
+    "subtitle": "Câu chuyện thực từ cộng đồng nông dân và doanh nghiệp của chúng tôi",
+    "farmer": {
+      "name": "Anh Minh",
+      "role": "Nông dân trồng lúa, Đồng bằng sông Cửu Long",
+      "quote": "AgroConnect giúp tôi tiếp cận trực tiếp với người mua cao cấp. Thu nhập của tôi tăng 25% trong năm đầu tiên."
+    },
+    "cooperative": {
+      "name": "Linh Hương",
+      "role": "Quản lý Hợp tác xã",
+      "quote": "Hệ thống chấm điểm ESG minh bạch và giúp chúng tôi chứng minh các thực hành bền vững với khách hàng."
+    },
+    "distributor": {
+      "name": "Tuấn Minh",
+      "role": "Nhà phân phối Thực phẩm Hữu cơ",
+      "quote": "Truy xuất nguồn gốc blockchain mang lại cho khách hàng của tôi sự yên tâm hoàn toàn về nguồn gốc sản phẩm."
+    }
+  },
+  "cta": {
+    "title": "Tham gia Cuộc cách mạng Nông nghiệp Bền vững",
+    "subtitle": "Cùng nhau, chúng ta xây dựng chuỗi cung ứng minh bạch, hướng ESG.",
+    "button": "Bắt đầu với AgroConnect"
+  },
+  "businessModule": {
+    "title": "Phân hệ doanh nghiệp thu mua",
+    "postDemand": {
+      "title": "Đăng nhu cầu thu mua",
+      "description": "Nhập loại nông sản, tiêu chuẩn mong muốn (VietGAP, hữu cơ, ESG Level B+)."
+    },
+    "reviewSuppliers": {
+      "title": "Duyệt danh sách nhà cung cấp",
+      "description": "Xem danh sách nông dân/HTX phù hợp theo bộ lọc tiêu chuẩn – vị trí – giá."
+    },
+    "electronicContract": {
+      "title": "Ký hợp đồng điện tử",
+      "description": "Hệ thống cung cấp mẫu hợp đồng chuẩn, có thể ký online và lưu trên Blockchain."
+    },
+    "esgReport": {
+      "title": "Xem báo cáo ESG",
+      "description": "Báo cáo đánh giá ESG của nhà cung cấp: phát thải, an toàn, truy xuất minh bạch."
+    }
+  },
+  "footer": {
+    "description": "Kết nối nông nghiệp bền vững với minh bạch và đổi mới.",
+    "company": "Công ty",
+    "resources": "Tài nguyên",
+    "contact": "Liên hệ",
+    "about": "Giới thiệu",
+    "esgPolicy": "Chính sách ESG",
+    "partnerships": "Đối tác",
+    "documentation": "Tài liệu",
+    "blog": "Blog",
+    "support": "Hỗ trợ",
+    "email": "hello@agroconnect.com",
+    "copyright": "© AgroConnect 2025. Tất cả quyền được bảo lưu."
+  }
+}

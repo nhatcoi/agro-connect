@@ -1,0 +1,392 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 128 57% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 123 100% 96%;
+    --secondary-foreground: 128 57% 20%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 38 100% 50%;
+    --accent-foreground: 128 57% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 94%;
+    --input: 0 0% 96%;
+    --ring: 128 57% 20%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 123 100% 96%;
+
+    --sidebar-foreground: 128 57% 20%;
+
+    --sidebar-primary: 128 57% 20%;
+
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 38 100% 50%;
+
+    --sidebar-accent-foreground: 128 57% 20%;
+
+    --sidebar-border: 0 0% 90%;
+
+    --sidebar-ring: 128 57% 20%;
+  }
+
+  .dark {
+    --background: 128 57% 12%;
+    --foreground: 0 0% 98%;
+
+    --card: 128 57% 16%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 128 57% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 38 100% 50%;
+    --primary-foreground: 128 57% 20%;
+
+    --secondary: 128 57% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 128 57% 24%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 38 100% 50%;
+    --accent-foreground: 128 57% 20%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 128 57% 22%;
+    --input: 128 57% 20%;
+    --ring: 38 100% 50%;
+    --sidebar-background: 128 57% 12%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 38 100% 50%;
+    --sidebar-primary-foreground: 128 57% 20%;
+    --sidebar-accent: 128 57% 20%;
+    --sidebar-accent-foreground: 38 100% 50%;
+    --sidebar-border: 128 57% 20%;
+    --sidebar-ring: 38 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    /* Improve Vietnamese text rendering */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Dark mode support for custom agro colors */
+  .dark {
+    --agro-green: #4CAF50;
+    --agro-green-light: #1B5E20;
+    --agro-orange: #FF9800;
+    --agro-white: #1a1a1a;
+    --agro-dark: #0D4F14;
+  }
+
+  /* Dark mode specific styles */
+  .dark .bg-agro-green-light {
+    background-color: #1B5E20;
+  }
+
+  /* Vietnamese font optimization */
+  .font-vietnam {
+    font-feature-settings: "liga" 1, "kern" 1;
+    letter-spacing: -0.01em;
+  }
+
+  /* Prevent layout shift for dropdown menus */
+  [data-radix-popper-content-wrapper] {
+    z-index: 9999 !important;
+  }
+
+  /* Ensure consistent button sizing */
+  .nav-button {
+    min-width: 40px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Pricing button improvements */
+  .pricing-card {
+    min-height: 400px;
+  }
+
+  /* Ensure button text is visible */
+  .pricing-button {
+    color: inherit !important;
+  }
+
+  .pricing-button:hover {
+    color: inherit !important;
+  }
+
+  /* Dark mode button text fixes */
+  .dark .pricing-button {
+    color: inherit !important;
+  }
+
+  .dark .pricing-button:hover {
+    color: inherit !important;
+  }
+
+  /* Specific button text colors */
+  .pricing-button.border-agro-green {
+    color: white !important;
+  }
+
+  .pricing-button.border-agro-green:hover {
+    color: #2E7D32 !important;
+  }
+
+  /* Popular badge improvements */
+  .popular-badge {
+    background: linear-gradient(135deg, #FFB300 0%, #FFD54F 100%);
+    box-shadow: 0 4px 15px rgba(255, 179, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .popular-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  .popular-badge-dot {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.2);
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold;
+  }
+
+  :where(p, span, li, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
+
+/* Animated Button Styles */
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: transparent;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 0 0 0 2px #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin: 0 auto;
+}
+
+/* Dark theme support */
+.dark .animated-button {
+  color: #ffffff;
+  box-shadow: 0 0 0 2px #1a1a1a;
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: #ffffff;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.dark .animated-button svg {
+  fill: #ffffff;
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #E8F5E9;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.dark .animated-button .circle {
+  background-color: #1B5E20;
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #2E7D32;
+  border-radius: 12px;
+}
+
+.dark .animated-button:hover {
+  color: #4CAF50;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #2E7D32;
+}
+
+.dark .animated-button:hover svg {
+  fill: #4CAF50;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px #FFB300;
+}
+
+.dark .animated-button:active {
+  box-shadow: 0 0 0 4px #FFC107;
+}
+
+.animated-button:hover .circle {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  border-radius: 12px;
+}
+
+/* React PDF Styles */
+.react-pdf__Page {
+  max-width: 100%;
+  height: auto;
+}
+
+.react-pdf__Page__canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.react-pdf__Page__textContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  opacity: 0.2;
+  line-height: 1.0;
+}
+
+.react-pdf__Page__textContent span {
+  color: transparent;
+  position: absolute;
+  white-space: pre;
+  cursor: text;
+  transform-origin: 0% 0%;
+}
+
+.react-pdf__Page__annotations {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}

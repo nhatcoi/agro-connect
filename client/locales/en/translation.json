@@ -1,0 +1,280 @@
+{
+  "nav": {
+    "about": "About",
+    "features": "Features",
+    "pricing": "Pricing",
+    "documentation": "Documentation",
+    "contact": "Contact",
+    "joinNow": "Join Now"
+  },
+  "auth": {
+    "loginRegister": "Login / Register"
+  },
+  "common": {
+    "education": "Education",
+    "experience": "Experience",
+    "role": "Role",
+    "language": "Language",
+    "theme": "Theme",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode"
+  },
+  "hero": {
+    "title": "AgroConnect – Empowering Sustainable Agriculture",
+    "subtitle": "A digital bridge linking farmers, cooperatives, and businesses through ESG and blockchain transparency.",
+    "tagline": "From Farm to Future.",
+    "joinButton": "Join AgroConnect",
+    "exploreButton": "Explore the Platform"
+  },
+  "about": {
+    "title": "About AgroConnect",
+    "subtitle": "Talented team building the future of sustainable agriculture",
+    "backToHome": "Back to Home",
+    "mission": {
+      "title": "Our Mission",
+      "subtitle": "Sustainable Agriculture",
+      "description1": "AgroConnect bridges the gap between farmers, cooperatives, businesses, and consumers. We improve farmer income, verify ESG compliance for enterprises, and empower consumers to make responsible purchasing decisions through transparent, blockchain-verified supply chains.",
+      "description2": "Our platform combines cutting-edge technology with genuine commitment to sustainable agricultural development, creating lasting positive impact across the entire value chain."
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "Talented individuals building the future of sustainable agriculture",
+      "members": {
+        "ceo": {
+          "name": "Nguyen Van Nhat",
+          "position": "Chief Executive Officer (CEO)",
+          "education": "Software Engineering student with solid foundation in software systems and digital business models.",
+          "experience": "Led multiple group entrepreneurship projects, managed technical team roles in major university assignments.",
+          "role": "Coordinate all project activities; develop growth strategies, connect agricultural partners, collaborate with ESG organizations and potential investors."
+        },
+        "cto": {
+          "name": "Trinh Nhu Nhat",
+          "position": "Chief Technology Officer (CTO)",
+          "education": "Computer Science student, proficient in web technologies, databases and information security.",
+          "experience": "Developed web applications, deployed APIs and designed system architecture.",
+          "role": "Lead technical team building AgroConnect platform, ensure system performance, security and scalability."
+        },
+        "cfo": {
+          "name": "Duong Thi Minh Nguyet",
+          "position": "Chief Financial Officer (CFO)",
+          "education": "Finance - Accounting major student",
+          "experience": "Basic understanding of accounting - finance, responsible for financial planning.",
+          "role": "Manage budget, financial planning, cost control and ensure transparency in all project financial activities."
+        },
+        "cmo": {
+          "name": "Nguyen Thi Thao Nguyen",
+          "position": "Chief Marketing Officer (CMO)",
+          "education": "Marketing major student",
+          "experience": "Participated in student communication campaigns, skilled in content creation and image promotion.",
+          "role": "Develop communication strategy, build AgroConnect brand, manage digital marketing channels (Facebook, TikTok, website and agricultural newsletter)."
+        },
+        "coo": {
+          "name": "Dang Xuan Dieu Nhi",
+          "position": "Chief Operating Officer (COO)",
+          "education": "Business Administration major student",
+          "experience": "Experience working in community projects, understand field operations processes.",
+          "role": "Manage field operations, coordinate farmer support teams, monitor product connection chains and quality verification processes."
+        },
+        "clo": {
+          "name": "Nguyen Hanh Nhi",
+          "position": "Chief Legal Officer (CLO)",
+          "education": "Law major student",
+          "experience": "Solid knowledge of civil and commercial law basics.",
+          "role": "Handle legal affairs, ensure project compliance with e-commerce regulations, intellectual property and agricultural law."
+        },
+        "chro": {
+          "name": "Tran Minh Nguyet",
+          "position": "Chief Human Resources Officer (CHRO)",
+          "education": "Human Resource Management major student",
+          "experience": "Experience organizing group activities, communication and motivation skills.",
+          "role": "Develop HR policies, manage recruitment, develop teams and spread corporate culture \"Connect – Honest – Sustainable\"."
+        },
+        "rdLead": {
+          "name": "Tran Van Nhat",
+          "position": "Research & Development Lead (R&D Lead)",
+          "education": "Computer Science student",
+          "experience": "Participated in simulation software development, group work experience in new technology application research projects.",
+          "role": "Research smart farming models, analyze supply chain data and propose technology solutions to help farmers improve productivity."
+        },
+        "externalLead": {
+          "name": "Nguyen Thi Hong Nhung",
+          "position": "External Relations Lead",
+          "education": "International Relations major student",
+          "experience": "Participated in student-enterprise cooperation projects, communication and presentation skills.",
+          "role": "Establish cooperation relationships with procurement businesses, agricultural organizations, and connect with government rural development programs."
+        },
+        "internationalLead": {
+          "name": "Tran My Nhung",
+          "position": "International Development Lead",
+          "education": "International Economics major student",
+          "experience": "Understanding of ASEAN market and cross-border trade.",
+          "role": "Research international markets, connect with ASEAN regional partners, seek agricultural export opportunities and green technology transfer cooperation."
+        }
+      }
+    },
+    "values": {
+      "title": "Core Values",
+      "connect": {
+        "title": "Connect",
+        "description": "Creating strong networks between farmers, businesses, and consumers"
+      },
+      "honest": {
+        "title": "Honest",
+        "description": "Ensuring transparency and honesty in all business activities"
+      },
+      "sustainable": {
+        "title": "Sustainable",
+        "description": "Committed to sustainable agricultural development and environmental protection"
+      }
+    },
+    "cta": {
+      "title": "Join Us",
+      "subtitle": "Together we build the future of sustainable agriculture",
+      "button": "Explore Platform"
+    }
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "description": "Talented team of 10 professional members, building the future of sustainable agriculture through blockchain technology and ESG transparency.",
+    "learnMore": "Learn More",
+    "meetTeam": "Meet the Team",
+    "teamCount": "10 Members",
+    "teamDescription": "Professional Team"
+  },
+  "features": {
+    "title": "Core Features",
+    "app": {
+      "title": "AgroConnect App/Web",
+      "description": "Farmers and cooperatives register, upload farming data, and get matched with verified buyers."
+    },
+    "blockchain": {
+      "title": "Blockchain Traceability",
+      "description": "Each product has a secure QR code storing farm info, ESG data, and logistics history."
+    },
+    "esg": {
+      "title": "ESG Scoring System",
+      "description": "Automated scoring by Environment, Social, Governance criteria — verified by experts."
+    },
+    "data": {
+      "title": "Data & Learning Portal",
+      "description": "Real-time crop prices, weather analytics, and online training for green farming."
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "step1": {
+      "title": "Produce",
+      "description": "Farmers update crops & certifications"
+    },
+    "step2": {
+      "title": "Partner",
+      "description": "Businesses post demand, system matches via AI"
+    },
+    "step3": {
+      "title": "Purchase",
+      "description": "Consumers scan QR to see full 'Farm-to-Table' journey"
+    }
+  },
+  "impact": {
+    "title": "Driving Positive Impact",
+    "income": {
+      "value": "20%",
+      "label": "Farmer Income Growth"
+    },
+    "consumers": {
+      "value": "68%",
+      "label": "Consumers Willing to Pay More"
+    },
+    "blockchain": {
+      "value": "100%",
+      "label": "Blockchain Verified Chains"
+    }
+  },
+  "pricing": {
+    "title": "AgroConnect Service Pricing",
+    "farmerSection": "Farmers / Producers",
+    "businessSection": "Businesses / Cooperatives",
+    "free": {
+      "name": "Free Plan",
+      "price": "$0",
+      "features": ["Basic registration", "Profile creation", "Market price viewing"]
+    },
+    "pro": {
+      "name": "Pro Plan",
+      "price": "$4.20",
+      "features": ["Partner suggestions", "Productivity analysis", "Season management"],
+      "popular": "Popular"
+    },
+    "enterprise": {
+      "name": "Enterprise Plan",
+      "price": "$21.20",
+      "features": ["Catalog management", "Brand promotion", "Trend analysis"]
+    },
+    "premium": {
+      "name": "Premium Plan",
+      "price": "$42.50",
+      "features": ["API traceability integration", "Featured advertising", "Priority technical support"]
+    },
+    "monthly": "/month",
+    "subscribeNow": "Subscribe Now",
+    "startFree": "Start Free",
+    "contactUs": "Contact Us"
+  },
+  "testimonials": {
+    "title": "Trusted by Growers, Verified by Partners",
+    "subtitle": "Real stories from our community of farmers and businesses",
+    "farmer": {
+      "name": "Anh Minh",
+      "role": "Rice Farmer, Mekong Delta",
+      "quote": "AgroConnect helped me reach premium buyers directly. My income increased by 25% in the first year."
+    },
+    "cooperative": {
+      "name": "Linh Huong",
+      "role": "Cooperative Manager",
+      "quote": "The ESG scoring system is transparent and helps us prove our sustainability practices to customers."
+    },
+    "distributor": {
+      "name": "Tuan Minh",
+      "role": "Organic Food Distributor",
+      "quote": "The blockchain traceability gives my customers complete peace of mind about product origins."
+    }
+  },
+  "cta": {
+    "title": "Join the Sustainable Agriculture Revolution",
+    "subtitle": "Together, we build transparent, ESG-driven supply chains.",
+    "button": "Get Started with AgroConnect"
+  },
+  "businessModule": {
+    "title": "Business Procurement Module",
+    "postDemand": {
+      "title": "Post Procurement Demand",
+      "description": "Enter agricultural product types, desired standards (VietGAP, organic, ESG Level B+)."
+    },
+    "reviewSuppliers": {
+      "title": "Review Supplier List",
+      "description": "View list of suitable farmers/cooperatives filtered by standards – location – price."
+    },
+    "electronicContract": {
+      "title": "Electronic Contract Signing",
+      "description": "System provides standard contract templates, can sign online and save on Blockchain."
+    },
+    "esgReport": {
+      "title": "View ESG Report",
+      "description": "ESG assessment report of suppliers: emissions, safety, transparent traceability."
+    }
+  },
+  "footer": {
+    "description": "Connecting sustainable agriculture with transparency and innovation.",
+    "company": "Company",
+    "resources": "Resources",
+    "contact": "Contact",
+    "about": "About",
+    "esgPolicy": "ESG Policy",
+    "partnerships": "Partnerships",
+    "documentation": "Documentation",
+    "blog": "Blog",
+    "support": "Support",
+    "email": "hello@agroconnect.com",
+    "copyright": "© AgroConnect 2025. All rights reserved."
+  }
+}
