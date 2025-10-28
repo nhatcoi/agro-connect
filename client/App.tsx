@@ -13,6 +13,8 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Auth from "./pages/Auth";
 import Documentation from "./pages/Documentation";
+import Features from "./pages/Features";
+import WIPFeature from "@/components/WIPFeature";
 import Traceability from "./pages/Traceability";
 import QRDemo from "./pages/QRDemo";
 import DashboardRoutes from "./pages/DashboardRoutes";
@@ -33,7 +35,9 @@ const AppContent = () => {
         <Route path="/documentation" element={<Documentation />} />
         <Route path="/traceability/:productId" element={<Traceability />} />
         <Route path="/qr-demo" element={<QRDemo />} />
-        <Route path="/dashboard/*" element={<DashboardRoutes />} />
+        <Route path="/features" element={<Features />} />
+        <Route path="/wip" element={<WIPFeature />} />
+        <Route path="/me/*" element={<DashboardRoutes />} />
         <Route path="/sidebar-demo" element={<SidebarDemo />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />

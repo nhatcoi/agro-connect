@@ -12,13 +12,14 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-background p-6">
       <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
+        <h1 className="text-5xl font-extrabold mb-2 text-agro-green">404</h1>
+        <p className="text-lg text-muted-foreground mb-4">Không tìm thấy trang bạn yêu cầu.</p>
+        <div className="flex items-center gap-3 justify-center">
+          <a href="/me" className="text-agro-green underline">Về trang chủ</a>
+          <a href="/features" className="text-muted-foreground underline">Xem danh mục chức năng</a>
+        </div>
       </div>
     </div>
   );

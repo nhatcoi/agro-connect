@@ -61,15 +61,15 @@ const DashboardLayout: React.FC = () => {
 
   const getPageTitle = (pathname: string): string => {
     switch (pathname) {
-      case '/dashboard/profile': return 'Hồ sơ cá nhân';
-      case '/dashboard/esg': return 'Xác thực ESG';
-      case '/dashboard/review': return 'Duyệt ESG';
-      case '/dashboard/seasons': return 'Mùa vụ';
-      case '/dashboard/images': return 'Hình ảnh thực địa';
-      case '/dashboard/products': return 'Sản phẩm nông sản';
-      case '/dashboard/partners': return 'Gợi ý đối tác';
-      case '/dashboard/orders': return 'Theo dõi đơn hàng';
-      case '/dashboard/activity': return 'Hoạt động';
+      case '/me/profile': return 'Hồ sơ cá nhân';
+      case '/me/esg': return 'Xác thực ESG';
+      case '/me/review': return 'Duyệt ESG';
+      case '/me/seasons': return 'Mùa vụ';
+      case '/me/images': return 'Hình ảnh thực địa';
+      case '/me/products': return 'Sản phẩm nông sản';
+      case '/me/partners': return 'Gợi ý đối tác';
+      case '/me/orders': return 'Theo dõi đơn hàng';
+      case '/me/activity': return 'Hoạt động';
       default: return 'Dashboard';
     }
   };
@@ -89,14 +89,18 @@ const DashboardLayout: React.FC = () => {
   return (
     <div className="flex h-screen bg-gray-50 dark:bg-gray-900">
       {/* Sidebar */}
-      <div className={`${sidebarOpen ? 'block' : 'hidden'} lg:block`}>
+      <div
+        className={
+          `lg:block ` +
+          `fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-gray-900 shadow transform transition-transform duration-200 ease-in-out ` +
+          `${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} ` +
+          `lg:static lg:shadow-none lg:transform-none`
+        }
+      >
         <DashboardSidebar
-          activeTab={location.pathname.split('/')[2] || 'profile'}
-          onTabChange={(tab) => {
-            navigate(`/dashboard/${tab}`);
-            setSidebarOpen(false);
-          }}
           userRole={user.role}
+          className="h-full"
+          onNavigate={() => setSidebarOpen(false)}
         />
       </div>
 

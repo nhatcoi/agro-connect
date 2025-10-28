@@ -18,7 +18,7 @@ const DashboardRoutes: React.FC = () => {
     <Routes>
       <Route path="/" element={<DashboardLayout />}>
         {/* Default redirect to profile */}
-        <Route index element={<Navigate to="/dashboard/profile" replace />} />
+        <Route index element={<Navigate to="/me/profile" replace />} />
         
         {/* Dashboard pages */}
         <Route path="profile" element={<ProfilePage />} />
@@ -32,7 +32,7 @@ const DashboardRoutes: React.FC = () => {
         <Route path="activity" element={<ActivityPage />} />
         
         {/* Catch all - redirect to profile */}
-        <Route path="*" element={<Navigate to="/dashboard/profile" replace />} />
+        <Route path="*" element={<Navigate to="/me/profile" replace />} />
       </Route>
     </Routes>
   );

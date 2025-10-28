@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
@@ -36,6 +36,14 @@ export default function Auth() {
     role: 'farmer'
   });
 
+  // If already logged in, redirect to dashboard
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      navigate('/me');
+    }
+  }, [navigate]);
+
   const handleInputChange = (field: keyof AuthFormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
@@ -61,7 +69,7 @@ export default function Auth() {
         if (result.success) {
           localStorage.setItem('token', result.data.session_token);
           localStorage.setItem('user', JSON.stringify(result.data.user));
-          navigate('/dashboard');
+          navigate('/me');
         } else {
           alert(result.message);
         }

@@ -140,7 +140,7 @@ export default function Traceability() {
           <XCircle className="h-16 w-16 text-red-500 mx-auto mb-4" />
           <h1 className="text-2xl font-bold mb-2">Không tìm thấy sản phẩm</h1>
           <p className="text-muted-foreground mb-4">{error}</p>
-          <Button onClick={() => navigate('/')}>
+          <Button onClick={() => navigate('/me')}>
             <ArrowLeft className="h-4 w-4 mr-2" />
             Về trang chủ
           </Button>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -9,6 +10,7 @@ import SimpleQRScanner from '@/components/SimpleQRScanner';
 import QRGenerator from '@/components/QRGenerator';
 
 export default function QRDemo() {
+  const navigate = useNavigate();
   const [isScannerOpen, setIsScannerOpen] = useState(false);
   const [isGeneratorOpen, setIsGeneratorOpen] = useState(false);
   const [scanResult, setScanResult] = useState<string>('');
@@ -33,6 +35,9 @@ export default function QRDemo() {
           <p className="text-muted-foreground">
             Hệ thống sinh và quét mã QR cho truy xuất nguồn gốc sản phẩm
           </p>
+          <div className="mt-4">
+            <Button variant="outline" onClick={() => navigate(-1)}>Quay lại</Button>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">

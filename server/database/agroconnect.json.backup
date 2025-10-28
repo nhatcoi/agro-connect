@@ -1,0 +1,832 @@
+{
+  "users": [
+    {
+      "email": "test@example.com",
+      "role": "farmer",
+      "full_name": "Test User Updated",
+      "password_hash": "$2b$10$V3/kOYftX79em/5.rcGTH.L8AU23r0aFc3NgNF8R1dIft490Cyk/K",
+      "is_active": true,
+      "is_verified": false,
+      "id": 1,
+      "created_at": "2025-10-26T12:00:22.654Z",
+      "updated_at": "2025-10-26T12:43:31.079Z",
+      "phone": "0123456789"
+    },
+    {
+      "email": "vnhat.dev@gmail.com",
+      "phone": "0376696037",
+      "role": "farmer",
+      "full_name": "Nhat Nhat",
+      "password_hash": "$2b$10$Z7yXbx.4mIvxX6yKyrM46u/RTksAacQ6ikJ5x0EwdRXvLvBPfVv7K",
+      "is_active": true,
+      "is_verified": false,
+      "id": 2,
+      "created_at": "2025-10-26T12:01:49.065Z",
+      "updated_at": "2025-10-26T12:01:49.065Z"
+    },
+    {
+      "email": "nhatcoi1206@gmail.com",
+      "phone": "0376696032",
+      "role": "esg_expert",
+      "full_name": "Expert",
+      "password_hash": "$2b$10$lFbxX7ecrTNsUaixC8xO5Ok6tROKWl284LgtQvR851kK5nQOT.Kz6",
+      "is_active": true,
+      "is_verified": false,
+      "id": 3,
+      "created_at": "2025-10-26T12:08:26.901Z",
+      "updated_at": "2025-10-26T12:08:26.901Z"
+    },
+    {
+      "email": "esg.expert@test.com",
+      "role": "esg_expert",
+      "full_name": "ESG Expert Test",
+      "password_hash": "$2b$10$bLxgNUhW3n7.LP1jZy.2B.s9S9OzsftJXjf5AAPzXNQI1NvXP7B5.",
+      "is_active": true,
+      "is_verified": false,
+      "id": 4,
+      "created_at": "2025-10-26T12:13:37.636Z",
+      "updated_at": "2025-10-26T12:13:37.636Z"
+    },
+    {
+      "email": "nhatcoifacebook@gmail.com",
+      "phone": "0376696031",
+      "role": "esg_expert",
+      "full_name": "Expert",
+      "password_hash": "$2b$10$xVmzqwluqboALZP7/an2XuoiSc6B1us7Mx/Y93fBBgSmiwmFM08UG",
+      "is_active": true,
+      "is_verified": false,
+      "id": 5,
+      "created_at": "2025-10-26T12:18:09.487Z",
+      "updated_at": "2025-10-26T12:18:09.487Z"
+    },
+    {
+      "email": "esg.expert2@test.com",
+      "role": "esg_expert",
+      "full_name": "ESG Expert 2",
+      "password_hash": "$2b$10$XN7i5amUmFHHQC8hHr8FguFu6jtwEYnLTYOLzP5AFrN.0Mhn2uPUi",
+      "is_active": true,
+      "is_verified": false,
+      "id": 6,
+      "created_at": "2025-10-26T12:19:32.514Z",
+      "updated_at": "2025-10-26T12:19:32.514Z"
+    },
+    {
+      "email": "super.esg@agroconnect.com",
+      "role": "esg_expert",
+      "full_name": "Super ESG Expert",
+      "password_hash": "$2b$10$cl1E9NdcwSbNXpJA154lU.yT2z3H0POfWkCRgnuIlYNVtOHu.A7Oy",
+      "is_active": true,
+      "is_verified": false,
+      "id": 7,
+      "created_at": "2025-10-26T12:21:56.682Z",
+      "updated_at": "2025-10-26T12:44:22.644Z",
+      "phone": ""
+    },
+    {
+      "email": "inodev@gmail.com",
+      "phone": "412451241",
+      "role": "consumer",
+      "full_name": "inodev@gmail.com",
+      "password_hash": "$2b$10$puPeXgmq1X.4qkias0iVPu11wVaDDTLUsYkCYiieQqctpQ3aeLjdy",
+      "is_active": true,
+      "is_verified": false,
+      "id": 8,
+      "created_at": "2025-10-26T12:27:51.778Z",
+      "updated_at": "2025-10-26T12:27:51.778Z"
+    },
+    {
+      "email": "new.farmer@test.com",
+      "role": "farmer",
+      "full_name": "Nông dân mới",
+      "password_hash": "$2b$10$dEoeuPczLO8OSnplBc.fKOjIYGM64DQixOhvK3I99l0/pQpVs7rfi",
+      "is_active": true,
+      "is_verified": false,
+      "id": 9,
+      "created_at": "2025-10-26T12:31:34.799Z",
+      "updated_at": "2025-10-26T12:31:34.799Z"
+    },
+    {
+      "email": "farmer@gmail.com",
+      "phone": "1451245124",
+      "role": "farmer",
+      "full_name": "114dqwrq",
+      "password_hash": "$2b$10$eQImu0rjRZ0GyQfYCqmy4uO.J9nHRgA24UFGhnqpd7KpbqkkbeZMO",
+      "is_active": true,
+      "is_verified": false,
+      "id": 10,
+      "created_at": "2025-10-26T12:35:04.865Z",
+      "updated_at": "2025-10-26T12:35:04.865Z"
+    },
+    {
+      "email": "test.farmer@example.com",
+      "role": "farmer",
+      "full_name": "Nông dân Test",
+      "password_hash": "$2b$10$yQsu8MTa6KmJhCezwMloTOfCu4HC/pabiVISfnabtThc3ZscT0/Zq",
+      "is_active": true,
+      "is_verified": false,
+      "id": 11,
+      "created_at": "2025-10-26T12:37:47.888Z",
+      "updated_at": "2025-10-26T12:37:47.888Z"
+    },
+    {
+      "email": "test.expert@example.com",
+      "role": "esg_expert",
+      "full_name": "ESG Expert Test",
+      "password_hash": "$2b$10$UDQXJU9Pil5M1wnbHcaeX..AxCQhkaM.TFfom8QZYvaIjKvmKanqa",
+      "is_active": true,
+      "is_verified": false,
+      "id": 12,
+      "created_at": "2025-10-26T12:40:02.927Z",
+      "updated_at": "2025-10-26T12:40:02.927Z"
+    },
+    {
+      "email": "farmer@test.com",
+      "role": "farmer",
+      "full_name": "Nguyễn Văn Nông dân",
+      "password_hash": "$2b$10$.Kylf2G5TzwBybJ3zQT95.SAp8UHk6L7jvpc/.oBnbhWfxQMGV2rm",
+      "is_active": true,
+      "is_verified": false,
+      "id": 13,
+      "created_at": "2025-10-26T14:44:50.441Z",
+      "updated_at": "2025-10-26T14:44:50.441Z"
+    },
+    {
+      "email": "business@test.com",
+      "role": "business",
+      "full_name": "Công ty Thực phẩm ABC",
+      "password_hash": "$2b$10$Dxbmt7NcMBfDctvIeBHzpOXm17bcjxi6ykh6W0HG9K077/CahaQTm",
+      "is_active": true,
+      "is_verified": true,
+      "id": 14,
+      "created_at": "2025-10-26T14:54:08.210Z",
+      "updated_at": "2025-10-26T15:18:55.191Z"
+    },
+    {
+      "email": "esg@test.com",
+      "role": "esg_expert",
+      "full_name": "ESG Expert Test",
+      "password_hash": "$2b$10$SqcH9nN.1I8SR1v.yPVxnuMHL9I0xBcVmFSJPyC8QPdajpYQ0OneS",
+      "is_active": true,
+      "is_verified": false,
+      "id": 15,
+      "created_at": "2025-10-26T14:56:01.216Z",
+      "updated_at": "2025-10-26T14:56:01.216Z"
+    }
+  ],
+  "userProfiles": [
+    {
+      "user_id": 1,
+      "bio": "Tôi là một nông dân có kinh nghiệm canh tác bền vững",
+      "certifications": [
+        "Chứng nhận hữu cơ",
+        "Chứng nhận GAP"
+      ],
+      "activity_history": [],
+      "social_links": {
+        "facebook": "https://facebook.com/testuser",
+        "linkedin": "https://linkedin.com/in/testuser"
+      },
+      "id": 1,
+      "created_at": "2025-10-26T12:00:22.654Z",
+      "updated_at": "2025-10-26T12:43:34.670Z",
+      "address": "123 Đường Nông nghiệp, Quận 1, TP.HCM"
+    },
+    {
+      "user_id": 2,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {},
+      "id": 2,
+      "created_at": "2025-10-26T12:01:49.065Z",
+      "updated_at": "2025-10-26T12:01:49.065Z"
+    },
+    {
+      "user_id": 3,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {},
+      "id": 3,
+      "created_at": "2025-10-26T12:08:26.902Z",
+      "updated_at": "2025-10-26T12:08:26.902Z"
+    },
+    {
+      "user_id": 4,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {},
+      "id": 4,
+      "created_at": "2025-10-26T12:13:37.637Z",
+      "updated_at": "2025-10-26T12:13:37.637Z"
+    },
+    {
+      "user_id": 5,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {},
+      "id": 5,
+      "created_at": "2025-10-26T12:18:09.487Z",
+      "updated_at": "2025-10-26T12:18:09.487Z"
+    },
+    {
+      "user_id": 6,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {},
+      "id": 6,
+      "created_at": "2025-10-26T12:19:32.515Z",
+      "updated_at": "2025-10-26T12:19:32.515Z"
+    },
+    {
+      "user_id": 7,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {
+        "facebook": "https://www.facebook.com/nhatcoi037"
+      },
+      "id": 7,
+      "created_at": "2025-10-26T12:21:56.682Z",
+      "updated_at": "2025-10-26T12:44:22.648Z",
+      "address": ""
+    },
+    {
+      "user_id": 8,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {},
+      "id": 8,
+      "created_at": "2025-10-26T12:27:51.779Z",
+      "updated_at": "2025-10-26T12:27:51.779Z"
+    },
+    {
+      "user_id": 9,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {},
+      "id": 9,
+      "created_at": "2025-10-26T12:31:34.800Z",
+      "updated_at": "2025-10-26T12:31:34.800Z"
+    },
+    {
+      "user_id": 10,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {},
+      "id": 10,
+      "created_at": "2025-10-26T12:35:04.865Z",
+      "updated_at": "2025-10-26T12:35:04.865Z"
+    },
+    {
+      "user_id": 11,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {},
+      "id": 11,
+      "created_at": "2025-10-26T12:37:47.889Z",
+      "updated_at": "2025-10-26T12:37:47.889Z"
+    },
+    {
+      "user_id": 12,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {},
+      "id": 12,
+      "created_at": "2025-10-26T12:40:02.928Z",
+      "updated_at": "2025-10-26T12:40:02.928Z"
+    },
+    {
+      "user_id": 13,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {},
+      "id": 13,
+      "created_at": "2025-10-26T14:44:50.441Z",
+      "updated_at": "2025-10-26T14:44:50.441Z"
+    },
+    {
+      "user_id": 14,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {},
+      "id": 14,
+      "created_at": "2025-10-26T14:54:08.211Z",
+      "updated_at": "2025-10-26T14:54:08.211Z"
+    },
+    {
+      "user_id": 15,
+      "bio": "",
+      "certifications": [],
+      "activity_history": [],
+      "social_links": {},
+      "id": 15,
+      "created_at": "2025-10-26T14:56:01.217Z",
+      "updated_at": "2025-10-26T14:56:01.217Z"
+    }
+  ],
+  "esgVerifications": [
+    {
+      "user_id": 1,
+      "verification_notes": "Nông dân có thực hành canh tác bền vững tốt",
+      "verification_status": "approved",
+      "id": 1,
+      "created_at": "2025-10-26T12:00:22.654Z",
+      "updated_at": "2025-10-26T12:22:23.989Z",
+      "esg_id": "ESG-MH7OIFP1-L3ADLZ",
+      "verified_by": 7,
+      "verification_date": "2025-10-26T12:22:23.989Z",
+      "esg_score": 85
+    },
+    {
+      "user_id": 2,
+      "verification_notes": "Nông dân có kinh nghiệm và thực hành ESG tốt",
+      "verification_status": "approved",
+      "id": 2,
+      "created_at": "2025-10-26T12:01:49.065Z",
+      "updated_at": "2025-10-26T12:22:28.326Z",
+      "esg_id": "ESG-MH7OIJ1I-44OM0V",
+      "verified_by": 7,
+      "verification_date": "2025-10-26T12:22:28.326Z",
+      "esg_score": 90
+    },
+    {
+      "user_id": 4,
+      "verification_notes": "ESG Expert có chuyên môn cao",
+      "verification_status": "approved",
+      "id": 3,
+      "created_at": "2025-10-26T12:13:37.637Z",
+      "updated_at": "2025-10-26T12:14:04.508Z",
+      "esg_id": "ESG-MH7O7QAK-RZDRGW",
+      "verified_by": 4,
+      "verification_date": "2025-10-26T12:14:04.508Z",
+      "esg_score": 95
+    },
+    {
+      "user_id": 3,
+      "verification_notes": "ESG Expert có chuyên môn cao, đạt tiêu chuẩn",
+      "verification_status": "approved",
+      "id": 4,
+      "created_at": "2025-10-26T12:16:44.557Z",
+      "updated_at": "2025-10-26T12:19:40.475Z",
+      "esg_id": "ESG-MH7OEXIZ-6PS9XU",
+      "verified_by": 6,
+      "verification_date": "2025-10-26T12:19:40.475Z",
+      "esg_score": 95
+    },
+    {
+      "user_id": 5,
+      "verification_notes": "ESG Expert có chuyên môn cao",
+      "verification_status": "approved",
+      "id": 5,
+      "created_at": "2025-10-26T12:18:09.487Z",
+      "updated_at": "2025-10-26T12:22:33.499Z",
+      "esg_id": "ESG-MH7OIN17-X8W5M0",
+      "verified_by": 7,
+      "verification_date": "2025-10-26T12:22:33.499Z",
+      "esg_score": 95
+    },
+    {
+      "user_id": 6,
+      "verification_notes": "ESG Expert có kiến thức chuyên sâu",
+      "verification_status": "approved",
+      "id": 6,
+      "created_at": "2025-10-26T12:19:32.515Z",
+      "updated_at": "2025-10-26T12:22:37.937Z",
+      "esg_id": "ESG-MH7OIQGH-V6800O",
+      "verified_by": 7,
+      "verification_date": "2025-10-26T12:22:37.937Z",
+      "esg_score": 92
+    },
+    {
+      "user_id": 7,
+      "verification_notes": "Auto-approved Super ESG Expert - System initialization",
+      "verification_status": "approved",
+      "id": 7,
+      "created_at": "2025-10-26T12:21:56.682Z",
+      "updated_at": "2025-10-26T12:22:12.197Z",
+      "esg_id": "ESG-MH7OI6LH-Z9GO86",
+      "verified_by": 7,
+      "verification_date": "2025-10-26T12:22:12.197Z",
+      "esg_score": 100
+    },
+    {
+      "user_id": 9,
+      "verification_notes": "Nông dân mới có tiềm năng canh tác bền vững",
+      "verification_status": "approved",
+      "id": 8,
+      "created_at": "2025-10-26T12:31:34.800Z",
+      "updated_at": "2025-10-26T12:31:39.675Z",
+      "esg_id": "ESG-MH7OUCGR-OTLFJG",
+      "verified_by": 7,
+      "verification_date": "2025-10-26T12:31:39.675Z",
+      "esg_score": 88
+    },
+    {
+      "user_id": 10,
+      "verification_notes": "Đã duyệt thành công",
+      "verification_status": "approved",
+      "id": 9,
+      "created_at": "2025-10-26T12:35:04.866Z",
+      "updated_at": "2025-10-26T12:39:12.946Z",
+      "esg_id": "ESG-MH7P427M-9Q1YPN",
+      "verified_by": 7,
+      "verification_date": "2025-10-26T12:39:12.946Z",
+      "esg_score": 85
+    },
+    {
+      "user_id": 11,
+      "verification_notes": "Đã duyệt thành công",
+      "verification_status": "approved",
+      "id": 10,
+      "created_at": "2025-10-26T12:37:47.889Z",
+      "updated_at": "2025-10-26T12:39:22.143Z",
+      "esg_id": "ESG-MH7P49B3-A3DTPH",
+      "verified_by": 7,
+      "verification_date": "2025-10-26T12:39:22.143Z",
+      "esg_score": 90
+    },
+    {
+      "user_id": 12,
+      "verification_notes": "Đã duyệt thành công",
+      "verification_status": "approved",
+      "id": 11,
+      "created_at": "2025-10-26T12:40:02.929Z",
+      "updated_at": "2025-10-26T12:41:12.495Z",
+      "esg_id": "ESG-MH7P6MGF-DSW7X7",
+      "verified_by": 7,
+      "verification_date": "2025-10-26T12:41:12.495Z",
+      "esg_score": 85
+    },
+    {
+      "user_id": 13,
+      "verification_notes": "Yêu cầu xác thực ESG tự động khi đăng ký",
+      "verification_status": "pending",
+      "id": 12,
+      "created_at": "2025-10-26T14:44:50.442Z",
+      "updated_at": "2025-10-26T14:44:50.442Z"
+    },
+    {
+      "user_id": 14,
+      "verification_notes": "Business user approved for partner matching",
+      "verification_status": "approved",
+      "id": 13,
+      "created_at": "2025-10-26T14:54:08.211Z",
+      "updated_at": "2025-10-26T15:19:12.908Z",
+      "esg_id": "ESG-MH7UTTL8-DG01LV",
+      "verified_by": 15,
+      "verification_date": "2025-10-26T15:19:12.908Z",
+      "esg_score": 85
+    },
+    {
+      "user_id": 15,
+      "verification_notes": "Business user approved for testing",
+      "verification_status": "approved",
+      "id": 14,
+      "created_at": "2025-10-26T14:56:01.217Z",
+      "updated_at": "2025-10-26T14:56:16.656Z",
+      "esg_id": "ESG-MH7U0BO0-FV2KEE",
+      "verified_by": 15,
+      "verification_date": "2025-10-26T14:56:16.656Z",
+      "esg_score": 85
+    }
+  ],
+  "esgScoreDetails": [],
+  "userSessions": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "session_token": "cae59d5208881cf4d44a5b87dc09caa70d01824821f7d850eb3d754c2c20d31b",
+      "expires_at": "2025-10-27T12:00:26.513Z",
+      "created_at": "2025-10-26T12:00:26.513Z"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "session_token": "7867c4a51b18b2e822b80704c206abe4f98907624ecfae781143363e8a679af7",
+      "expires_at": "2025-10-27T12:01:56.071Z",
+      "created_at": "2025-10-26T12:01:56.071Z"
+    },
+    {
+      "id": 3,
+      "user_id": 2,
+      "session_token": "7c767393a93ba98c9d657225657ed486e72920cc5799f8ff1949148ecb5e2380",
+      "expires_at": "2025-10-27T12:02:50.178Z",
+      "created_at": "2025-10-26T12:02:50.178Z"
+    },
+    {
+      "id": 4,
+      "user_id": 2,
+      "session_token": "abc82bbca873d3933696940e12b6bd1ae16291f9897354b4d8cceae88ac0d51a",
+      "expires_at": "2025-10-27T12:03:30.139Z",
+      "created_at": "2025-10-26T12:03:30.139Z"
+    },
+    {
+      "id": 5,
+      "user_id": 3,
+      "session_token": "6ea156870f014cfa821fe2fe0c96b14616b39569296019fa76001e998562afdb",
+      "expires_at": "2025-10-27T12:08:30.082Z",
+      "created_at": "2025-10-26T12:08:30.082Z"
+    },
+    {
+      "id": 6,
+      "user_id": 2,
+      "session_token": "67f5962f8b1d6e3a6c32940b2a4c2413418fa1fcfb2c2baa299011031155f7bc",
+      "expires_at": "2025-10-27T12:10:00.340Z",
+      "created_at": "2025-10-26T12:10:00.340Z"
+    },
+    {
+      "id": 7,
+      "user_id": 3,
+      "session_token": "df98602180053f054c1a525b63596db34a231b21dc34ee340808b3c52755ea55",
+      "expires_at": "2025-10-27T12:11:12.657Z",
+      "created_at": "2025-10-26T12:11:12.657Z"
+    },
+    {
+      "id": 8,
+      "user_id": 4,
+      "session_token": "d07c0c6cddb117d5064f7fa43355f155b589cb0f3e83ef36db8397057308525f",
+      "expires_at": "2025-10-27T12:13:41.725Z",
+      "created_at": "2025-10-26T12:13:41.725Z"
+    },
+    {
+      "id": 9,
+      "user_id": 5,
+      "session_token": "d526801db9bb38791ea594ef4a0b35c0db02791aa06ea0cfd4f4f6e2fa774e22",
+      "expires_at": "2025-10-27T12:18:13.682Z",
+      "created_at": "2025-10-26T12:18:13.682Z"
+    },
+    {
+      "id": 10,
+      "user_id": 6,
+      "session_token": "8036f0d6d81dc82cf7ac954b7c767f629bf3aebdd2c7d8f1d94bd23a719af44f",
+      "expires_at": "2025-10-27T12:19:36.151Z",
+      "created_at": "2025-10-26T12:19:36.151Z"
+    },
+    {
+      "id": 11,
+      "user_id": 2,
+      "session_token": "1d9451ddd14fe30b345033d4d0f45436a97a39982803ebda4e2e13d5aa697ad4",
+      "expires_at": "2025-10-27T12:20:36.679Z",
+      "created_at": "2025-10-26T12:20:36.679Z"
+    },
+    {
+      "id": 12,
+      "user_id": 7,
+      "session_token": "f822b1f188db6045ffceca3c172b68a6f1126a2c18dbee88a3f3bd9001e558c7",
+      "expires_at": "2025-10-27T12:22:15.802Z",
+      "created_at": "2025-10-26T12:22:15.802Z"
+    },
+    {
+      "id": 13,
+      "user_id": 1,
+      "session_token": "f46e1d4364c7692506a5653644a526136f9d7a5f69e80982c898c0373babdd7c",
+      "expires_at": "2025-10-27T12:26:37.489Z",
+      "created_at": "2025-10-26T12:26:37.489Z"
+    },
+    {
+      "id": 14,
+      "user_id": 8,
+      "session_token": "08dc93d4528bcd404366c0d45fc99b3e231edf5aabe159eaa850bd34502228e8",
+      "expires_at": "2025-10-27T12:27:56.668Z",
+      "created_at": "2025-10-26T12:27:56.668Z"
+    },
+    {
+      "id": 15,
+      "user_id": 2,
+      "session_token": "f71f8e31d2f28bd8ae70428a38da593d2ff3c7dd1f34dc11fd96b4c330cf7230",
+      "expires_at": "2025-10-27T12:32:47.014Z",
+      "created_at": "2025-10-26T12:32:47.014Z"
+    },
+    {
+      "id": 16,
+      "user_id": 10,
+      "session_token": "f1faa58ff6994badd2144fe050dd5a93922424d10a606e472f760058f968c8a4",
+      "expires_at": "2025-10-27T12:35:08.054Z",
+      "created_at": "2025-10-26T12:35:08.054Z"
+    },
+    {
+      "id": 17,
+      "user_id": 7,
+      "session_token": "b4d3a1d7cfce01e7e86bf1cff92e3975f47e10cb2ad912ff9b1a0312b05b9340",
+      "expires_at": "2025-10-27T12:38:53.334Z",
+      "created_at": "2025-10-26T12:38:53.334Z"
+    },
+    {
+      "id": 18,
+      "user_id": 12,
+      "session_token": "f5084c3a73ad2d1f794fd9c71d615921677b2ca7d1ec776200becac3cfdb5268",
+      "expires_at": "2025-10-27T12:40:05.150Z",
+      "created_at": "2025-10-26T12:40:05.150Z"
+    },
+    {
+      "id": 19,
+      "user_id": 3,
+      "session_token": "881ac7f8d15a1d66330307851aa802715c90e735f488a0dd098d3734b7c5ac9d",
+      "expires_at": "2025-10-27T12:40:43.791Z",
+      "created_at": "2025-10-26T12:40:43.792Z"
+    },
+    {
+      "id": 20,
+      "user_id": 1,
+      "session_token": "a915a103a942e8f66566c65172bda500d3598fbff4efb3a0abbf51eaedc25d9c",
+      "expires_at": "2025-10-27T12:43:27.960Z",
+      "created_at": "2025-10-26T12:43:27.960Z"
+    },
+    {
+      "id": 21,
+      "user_id": 1,
+      "session_token": "f16aceddd6b6161e527a55ac8210613d950d22be3de5b64804a36f5e9907817c",
+      "expires_at": "2025-10-27T12:49:51.889Z",
+      "created_at": "2025-10-26T12:49:51.889Z"
+    },
+    {
+      "id": 22,
+      "user_id": 1,
+      "session_token": "49dc27f2178ee2acb5b6af6d5746795bffe6c2a8a9136aaa5a1eac6f460c2118",
+      "expires_at": "2025-10-27T12:51:05.226Z",
+      "created_at": "2025-10-26T12:51:05.226Z"
+    },
+    {
+      "id": 23,
+      "user_id": 10,
+      "session_token": "b3e787a0824ca8d0e299fd6d950f84b48a3bc584188122e5a5a23b2c67241bc2",
+      "expires_at": "2025-10-27T12:57:27.006Z",
+      "created_at": "2025-10-26T12:57:27.007Z"
+    },
+    {
+      "id": 24,
+      "user_id": 3,
+      "session_token": "606dc199fbb4e498e285dadf0c0e6a0fafad36fbd12fd919d59e16fe5d670260",
+      "expires_at": "2025-10-27T13:47:53.951Z",
+      "created_at": "2025-10-26T13:47:53.951Z"
+    },
+    {
+      "id": 25,
+      "user_id": 3,
+      "session_token": "7c7fccb7e5d41aa0d2e0fd47f64f947cb979e8f378584249e1c6f6af64098791",
+      "expires_at": "2025-10-27T14:21:45.698Z",
+      "created_at": "2025-10-26T14:21:45.698Z"
+    },
+    {
+      "id": 26,
+      "user_id": 10,
+      "session_token": "14d4a27814c805dd4b34c1c5b136a0a80ec41f88289f14b1ec5575a7228b6415",
+      "expires_at": "2025-10-27T14:22:09.481Z",
+      "created_at": "2025-10-26T14:22:09.481Z"
+    },
+    {
+      "id": 27,
+      "user_id": 13,
+      "session_token": "edf6d26ccf94fed90f95592fadace6387a5a41b97b359ae7b6f2d638414a8029",
+      "expires_at": "2025-10-27T14:44:53.577Z",
+      "created_at": "2025-10-26T14:44:53.577Z"
+    },
+    {
+      "id": 28,
+      "user_id": 14,
+      "session_token": "81204ad383b34ab0a770a52b1054bba221a81077e9c776c2c9daee53fa2dc0c7",
+      "expires_at": "2025-10-27T14:54:11.491Z",
+      "created_at": "2025-10-26T14:54:11.491Z"
+    },
+    {
+      "id": 29,
+      "user_id": 15,
+      "session_token": "b1373c3f0048408f418eb81222e6de26dc52adae4c587c3190743068da395a64",
+      "expires_at": "2025-10-27T14:56:12.419Z",
+      "created_at": "2025-10-26T14:56:12.419Z"
+    },
+    {
+      "id": 30,
+      "user_id": 3,
+      "session_token": "a2bba1b2fde1d449f0a5fca1d9e07c8d688e804b3eb6b3b0bdf7150a5c86dbc7",
+      "expires_at": "2025-10-27T16:39:15.278Z",
+      "created_at": "2025-10-26T16:39:15.278Z"
+    },
+    {
+      "id": 31,
+      "user_id": 3,
+      "session_token": "378ce7b884bf378d0e1b05e020a1b3a6518884cb976731ab4b92886235801ee5",
+      "expires_at": "2025-10-27T16:39:21.099Z",
+      "created_at": "2025-10-26T16:39:21.099Z"
+    },
+    {
+      "id": 32,
+      "user_id": 10,
+      "session_token": "c048100c8179c7447389b521b9a46f4f7e7005eac9baed31189922f24b752400",
+      "expires_at": "2025-10-27T16:39:35.616Z",
+      "created_at": "2025-10-26T16:39:35.616Z"
+    },
+    {
+      "id": 33,
+      "user_id": 10,
+      "session_token": "540bbc8befb0c2a5bd8103cc166ad6da90e194ae477e157b8e02d95d1348005f",
+      "expires_at": "2025-10-27T16:39:45.731Z",
+      "created_at": "2025-10-26T16:39:45.731Z"
+    },
+    {
+      "id": 34,
+      "user_id": 10,
+      "session_token": "52e0f140d978f3148fee5c791e55af5663899024bdfcecb3db78a3ac890612a0",
+      "expires_at": "2025-10-27T16:40:12.379Z",
+      "created_at": "2025-10-26T16:40:12.379Z"
+    },
+    {
+      "id": 35,
+      "user_id": 10,
+      "session_token": "05ca170437890013f4198255ac1aa7c62bf9e3566c1947f6387481458d246e1f",
+      "expires_at": "2025-10-27T16:40:17.315Z",
+      "created_at": "2025-10-26T16:40:17.315Z"
+    },
+    {
+      "id": 36,
+      "user_id": 10,
+      "session_token": "9e36c1869af7a951182e7ab61f838d0835ee62eff2560ee915248323bdb7d825",
+      "expires_at": "2025-10-27T16:40:42.293Z",
+      "created_at": "2025-10-26T16:40:42.293Z"
+    },
+    {
+      "id": 37,
+      "user_id": 13,
+      "session_token": "f1cee71f4e94a419ef421161948f432d6e810baf558408037f8c20f4cb1bd776",
+      "expires_at": "2025-10-27T16:41:07.323Z",
+      "created_at": "2025-10-26T16:41:07.323Z"
+    },
+    {
+      "id": 38,
+      "user_id": 10,
+      "session_token": "fb477605c3e504671bed314a593a95cc8eb355618e51216b5edd39059b64f7b8",
+      "expires_at": "2025-10-27T16:41:58.864Z",
+      "created_at": "2025-10-26T16:41:58.864Z"
+    },
+    {
+      "id": 39,
+      "user_id": 3,
+      "session_token": "4df2ca6bd9205ff61ef7f1fcce142dc5db444c05ebf65646a40040f5be923fb5",
+      "expires_at": "2025-10-27T16:43:42.690Z",
+      "created_at": "2025-10-26T16:43:42.690Z"
+    },
+    {
+      "id": 40,
+      "user_id": 10,
+      "session_token": "f06ca002117e084be508c6d6a044d04be7dfbba971b34a24a2c1e63a80def5dd",
+      "expires_at": "2025-10-29T05:14:58.231Z",
+      "created_at": "2025-10-28T05:14:58.232Z"
+    },
+    {
+      "id": 41,
+      "user_id": 1,
+      "session_token": "d8fa6b1abf72d4e66c9cdf522ea798ba8e0f197ea0e35613c441abbc15eabb07",
+      "expires_at": "2025-10-29T06:18:53.528Z",
+      "created_at": "2025-10-28T06:18:53.528Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "order_number": "ORD-1703123456-ABC123",
+      "farmer_id": 13,
+      "business_id": 14,
+      "product_id": 1,
+      "quantity": 100,
+      "unit": "kg",
+      "price_per_unit": 15000,
+      "total_amount": 1500000,
+      "currency": "VND",
+      "status": "pending",
+      "delivery_address": "123 Đường ABC, Quận 1, TP.HCM",
+      "delivery_date": "2024-01-15",
+      "notes": "Giao hàng vào buổi sáng",
+      "created_at": "2024-01-10T10:00:00Z",
+      "updated_at": "2024-01-10T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "order_number": "ORD-1703123457-DEF456",
+      "farmer_id": 13,
+      "business_id": 14,
+      "product_id": 2,
+      "quantity": 50,
+      "unit": "kg",
+      "price_per_unit": 20000,
+      "total_amount": 1000000,
+      "currency": "VND",
+      "status": "confirmed",
+      "delivery_address": "456 Đường XYZ, Quận 2, TP.HCM",
+      "delivery_date": "2024-01-20",
+      "notes": "Sản phẩm hữu cơ",
+      "created_at": "2024-01-12T14:30:00Z",
+      "updated_at": "2024-01-13T09:15:00Z"
+    }
+  ]
+}
