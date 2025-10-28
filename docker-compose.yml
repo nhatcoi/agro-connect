@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: agro-connect:latest
+    container_name: agro-connect
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - PING_MESSAGE=ping
+    volumes:
+      - db_data:/app/server/database
+    restart: unless-stopped
+
+volumes:
+  db_data:
+    driver: local
