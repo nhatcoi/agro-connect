@@ -7,10 +7,10 @@ services:
     image: agro-connect:latest
     container_name: agro-connect
     ports:
-      - "3000:3000"
+      - "8087:3007"
     environment:
       - NODE_ENV=production
-      - PORT=3000
+      - PORT=3007
       - PING_MESSAGE=ping
     volumes:
       - db_data:/app/server/database

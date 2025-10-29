@@ -31,9 +31,9 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/public ./public
 
-# App listens on 3000 (server/node-build.ts)
-ENV PORT=3000
-EXPOSE 3000
+# App listens on 3007 (server/node-build.ts)
+ENV PORT=3007
+EXPOSE 3007
 
 CMD ["node", "dist/server/node-build.mjs"]
 

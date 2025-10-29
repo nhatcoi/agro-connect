@@ -2,24 +2,17 @@ import { ethers } from 'ethers';
 import { BLOCKCHAIN_CONFIG, CONTRACT_ABI, formatProductForBlockchain, formatProductFromBlockchain } from '../config/blockchain';
 
 class BlockchainService {
-  private provider: ethers.providers.JsonRpcProvider;
+  private provider: ethers.JsonRpcProvider;
   private wallet: ethers.Wallet;
   private contract: ethers.Contract;
 
   constructor() {
     try {
-      this.provider = new ethers.providers.JsonRpcProvider(BLOCKCHAIN_CONFIG.rpcUrl);
-      
-      if (BLOCKCHAIN_CONFIG.privateKey) {
-        this.wallet = new ethers.Wallet(BLOCKCHAIN_CONFIG.privateKey, this.provider);
-        this.contract = new ethers.Contract(
-          BLOCKCHAIN_CONFIG.contractAddress,
-          CONTRACT_ABI,
-          this.wallet
-        );
-      } else {
-        console.warn('⚠️  Private key not provided. Blockchain service will run in read-only mode.');
-      }
+      // Disable blockchain service to prevent server startup issues
+      console.log('⚠️  Blockchain service disabled - running in offline mode');
+      this.provider = null as any;
+      this.wallet = null as any;
+      this.contract = null as any;
     } catch (error) {
       console.warn('⚠️  Failed to initialize blockchain service:', error);
       this.provider = null as any;

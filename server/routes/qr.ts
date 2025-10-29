@@ -4,7 +4,7 @@ import crypto from 'crypto';
 import { ProductModel } from '../models/Product';
 import { OrderModel } from '../models/Order';
 import { authenticateToken, AuthenticatedRequest } from '../middleware/auth';
-import blockchainService from '../services/blockchain';
+// import blockchainService from '../services/blockchain';
 import { formatProductForBlockchain } from '../config/blockchain';
 
 const router = Router();
@@ -59,7 +59,8 @@ router.post('/generate', authenticateToken, async (req: Request, res: Response) 
       .digest('hex');
 
     // Kiểm tra blockchain availability
-    const isBlockchainAvailable = await blockchainService.isAvailable();
+    // const isBlockchainAvailable = await blockchainService.isAvailable();
+    const isBlockchainAvailable = false;
     let blockchainTxHash = null;
 
     if (isBlockchainAvailable) {
@@ -76,14 +77,16 @@ router.post('/generate', authenticateToken, async (req: Request, res: Response) 
         });
 
         // Thêm sản phẩm lên blockchain
-        const blockchainResult = await blockchainService.addProduct(blockchainProductData);
+        // const blockchainResult = await blockchainService.addProduct(blockchainProductData);
+        const blockchainResult = { success: false, error: 'Blockchain disabled' };
         
         if (blockchainResult.success) {
           blockchainTxHash = blockchainResult.txHash;
           console.log('✅ Product added to blockchain:', blockchainTxHash);
           
           // Verify product on blockchain
-          const verifyResult = await blockchainService.verifyProduct(product.id, blockchainHash);
+          // const verifyResult = await blockchainService.verifyProduct(product.id, blockchainHash);
+          const verifyResult = { success: false, error: 'Blockchain disabled' };
           if (verifyResult.success) {
             console.log('✅ Product verified on blockchain:', verifyResult.txHash);
           }
@@ -155,19 +158,22 @@ router.get('/traceability/:productId', async (req: Request, res: Response) => {
     const productId = Number(req.params.productId);
     
     // Kiểm tra blockchain availability
-    const isBlockchainAvailable = await blockchainService.isAvailable();
+    // const isBlockchainAvailable = await blockchainService.isAvailable();
+    const isBlockchainAvailable = false;
     let blockchainProduct = null;
     let blockchainVerification = null;
 
     // Nếu blockchain available, lấy dữ liệu từ blockchain
     if (isBlockchainAvailable) {
       try {
-        const productResult = await blockchainService.getProduct(productId);
+        // const productResult = await blockchainService.getProduct(productId);
+        const productResult = { success: false, error: 'Blockchain disabled' };
         if (productResult.success) {
           blockchainProduct = productResult.product;
         }
 
-        const verificationResult = await blockchainService.getVerification(productId);
+        // const verificationResult = await blockchainService.getVerification(productId);
+        const verificationResult = { success: false, error: 'Blockchain disabled' };
         if (verificationResult.success) {
           blockchainVerification = verificationResult.verification;
         }
@@ -341,10 +347,12 @@ router.post('/scan', async (req: Request, res: Response) => {
 // Kiểm tra trạng thái blockchain
 router.get('/blockchain/status', async (req: Request, res: Response) => {
   try {
-    const isAvailable = await blockchainService.isAvailable();
+    // const isAvailable = await blockchainService.isAvailable();
+    const isAvailable = false;
     
     if (isAvailable) {
-      const stats = await blockchainService.getStats();
+      // const stats = await blockchainService.getStats();
+      const stats = { error: 'Blockchain disabled' };
       res.json({
         success: true,
         data: {
