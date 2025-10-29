@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useFontFamily } from '@/hooks/useFontFamily';
+import { useTranslation } from 'react-i18next';
 import { LogOut, Menu, X } from 'lucide-react';
 import DashboardSidebar from './DashboardSidebar';
 
@@ -16,6 +17,7 @@ interface UserData {
 
 const DashboardLayout: React.FC = () => {
   const { getFontFamily } = useFontFamily();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   
@@ -61,16 +63,16 @@ const DashboardLayout: React.FC = () => {
 
   const getPageTitle = (pathname: string): string => {
     switch (pathname) {
-      case '/me/profile': return 'Hồ sơ cá nhân';
-      case '/me/esg': return 'Xác thực ESG';
-      case '/me/review': return 'Duyệt ESG';
-      case '/me/seasons': return 'Mùa vụ';
-      case '/me/images': return 'Hình ảnh thực địa';
-      case '/me/products': return 'Sản phẩm nông sản';
-      case '/me/partners': return 'Gợi ý đối tác';
-      case '/me/orders': return 'Theo dõi đơn hàng';
-      case '/me/activity': return 'Hoạt động';
-      default: return 'Dashboard';
+      case '/me/profile': return t('dashboard.pageTitles.profile');
+      case '/me/esg': return t('dashboard.pageTitles.esg');
+      case '/me/review': return t('dashboard.pageTitles.review');
+      case '/me/seasons': return t('dashboard.pageTitles.seasons');
+      case '/me/images': return t('dashboard.pageTitles.images');
+      case '/me/products': return t('dashboard.pageTitles.products');
+      case '/me/partners': return t('dashboard.pageTitles.partners');
+      case '/me/orders': return t('dashboard.pageTitles.orders');
+      case '/me/activity': return t('dashboard.pageTitles.activity');
+      default: return t('dashboard.title');
     }
   };
 
@@ -123,7 +125,7 @@ const DashboardLayout: React.FC = () => {
                   {getPageTitle(location.pathname)}
                 </h1>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Chào mừng trở lại, {user.full_name}
+                  {t('dashboard.welcomeBack', { name: user.full_name })}
                 </p>
               </div>
             </div>
@@ -134,7 +136,7 @@ const DashboardLayout: React.FC = () => {
               className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
             >
               <LogOut className="w-4 h-4 mr-2" />
-              Đăng xuất
+              {t('dashboard.logout')}
             </Button>
           </div>
         </header>

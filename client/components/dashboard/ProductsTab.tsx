@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -48,6 +49,7 @@ interface ProductsTabProps {
 }
 
 export default function ProductsTab({ products, seasons, onUpdateProducts }: ProductsTabProps) {
+  const { t } = useTranslation();
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   const [isQRModalOpen, setIsQRModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -109,19 +111,19 @@ export default function ProductsTab({ products, seasons, onUpdateProducts }: Pro
       if (response.ok) {
         onUpdateProducts();
         setIsProductModalOpen(false);
-        alert('Tạo sản phẩm thành công!');
+        alert(t('dashboard.products.createSuccess'));
       } else {
         const error = await response.json();
-        alert(error.message || 'Có lỗi xảy ra khi tạo sản phẩm');
+        alert(error.message || t('dashboard.products.createError'));
       }
     } catch (error) {
       console.error('Create product error:', error);
-      alert('Có lỗi xảy ra');
+      alert(t('dashboard.products.errorOccurred'));
     }
   };
 
   const handleDeleteProduct = async (productId: number) => {
-    if (!confirm('Bạn có chắc chắn muốn xóa sản phẩm này?')) {
+    if (!confirm(t('dashboard.products.deleteConfirm'))) {
       return;
     }
 
@@ -137,28 +139,28 @@ export default function ProductsTab({ products, seasons, onUpdateProducts }: Pro
 
       if (response.ok) {
         onUpdateProducts();
-        alert('Xóa sản phẩm thành công!');
+        alert(t('dashboard.products.deleteSuccess'));
       } else {
-        alert('Có lỗi xảy ra khi xóa sản phẩm');
+        alert(t('dashboard.products.deleteError'));
       }
     } catch (error) {
       console.error('Delete product error:', error);
-      alert('Có lỗi xảy ra');
+      alert(t('dashboard.products.errorOccurred'));
     }
   };
 
   const getProductStatusBadge = (status: string) => {
     switch (status) {
       case 'available':
-        return <Badge className="bg-green-500">Có sẵn</Badge>;
+        return <Badge className="bg-green-500">{t('dashboard.products.statuses.available')}</Badge>;
       case 'reserved':
-        return <Badge className="bg-yellow-500">Đã đặt</Badge>;
+        return <Badge className="bg-yellow-500">{t('dashboard.products.statuses.reserved')}</Badge>;
       case 'sold':
-        return <Badge className="bg-blue-500">Đã bán</Badge>;
+        return <Badge className="bg-blue-500">{t('dashboard.products.statuses.sold')}</Badge>;
       case 'expired':
-        return <Badge variant="destructive">Hết hạn</Badge>;
+        return <Badge variant="destructive">{t('dashboard.products.statuses.expired')}</Badge>;
       default:
-        return <Badge variant="outline">Không xác định</Badge>;
+        return <Badge variant="outline">{t('dashboard.products.statuses.unknown')}</Badge>;
     }
   };
 
@@ -210,15 +212,15 @@ export default function ProductsTab({ products, seasons, onUpdateProducts }: Pro
             <div>
               <CardTitle className="flex items-center">
                 <Package className="w-5 h-5 mr-2" />
-                Quản lý sản phẩm nông sản
+                {t('dashboard.products.manageProducts')}
               </CardTitle>
               <CardDescription>
-                Khai báo tên, khối lượng, vùng trồng, tiêu chuẩn chất lượng
+                {t('dashboard.products.manageProductsDesc')}
               </CardDescription>
             </div>
             <Button className="bg-agro-green hover:bg-agro-dark" onClick={() => setIsProductModalOpen(true)}>
               <Plus className="w-4 h-4 mr-2" />
-              Tạo sản phẩm mới
+              {t('dashboard.products.addProduct')}
             </Button>
           </div>
         </CardHeader>
@@ -230,21 +232,21 @@ export default function ProductsTab({ products, seasons, onUpdateProducts }: Pro
                   <CardContent className="pt-6">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
                       <div>
-                        <label className="text-sm font-medium text-muted-foreground">Tên sản phẩm</label>
+                        <label className="text-sm font-medium text-muted-foreground">{t('dashboard.products.productName')}</label>
                         <p className="text-lg font-semibold">{product.product_name}</p>
                         <p className="text-sm text-muted-foreground">{product.product_type}</p>
                       </div>
                       <div>
-                        <label className="text-sm font-medium text-muted-foreground">Số lượng & Giá</label>
+                        <label className="text-sm font-medium text-muted-foreground">{t('dashboard.products.quantityAndPrice')}</label>
                         <p className="text-sm">{product.quantity} {product.unit}</p>
                         <p className="text-lg font-bold text-agro-green">
                           {formatPrice(product.price_per_unit, product.currency)}
                         </p>
                       </div>
                       <div>
-                        <label className="text-sm font-medium text-muted-foreground">Trạng thái</label>
+                        <label className="text-sm font-medium text-muted-foreground">{t('dashboard.products.status')}</label>
                         <div className="mb-2">{getProductStatusBadge(product.status)}</div>
-                        <p className="text-sm">Thu hoạch: {new Date(product.harvest_date).toLocaleDateString('vi-VN')}</p>
+                        <p className="text-sm">{t('dashboard.products.harvest')}: {new Date(product.harvest_date).toLocaleDateString('vi-VN')}</p>
                       </div>
                       <div className="flex items-center justify-end space-x-2">
                         <Button 
@@ -253,7 +255,7 @@ export default function ProductsTab({ products, seasons, onUpdateProducts }: Pro
                           onClick={() => handleGenerateQR(product)}
                         >
                           <QrCode className="w-4 h-4 mr-1" />
-                          QR Code
+                          {t('dashboard.products.qrCode')}
                         </Button>
                         <Button 
                           size="sm" 
@@ -261,13 +263,13 @@ export default function ProductsTab({ products, seasons, onUpdateProducts }: Pro
                           onClick={() => handleDeleteProduct(product.id)}
                         >
                           <Trash2 className="w-4 h-4 mr-1" />
-                          Xóa
+                          {t('dashboard.products.delete')}
                         </Button>
                       </div>
                     </div>
                     
                     <div className="mb-4">
-                      <label className="text-sm font-medium text-muted-foreground">Địa điểm</label>
+                      <label className="text-sm font-medium text-muted-foreground">{t('dashboard.products.location')}</label>
                       <p className="text-sm">{product.location_address}</p>
                     </div>
                     
@@ -275,7 +277,7 @@ export default function ProductsTab({ products, seasons, onUpdateProducts }: Pro
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         {product.quality_standards.length > 0 && (
                           <div>
-                            <label className="text-sm font-medium text-muted-foreground">Tiêu chuẩn chất lượng</label>
+                            <label className="text-sm font-medium text-muted-foreground">{t('dashboard.products.qualityStandards')}</label>
                             <div className="flex flex-wrap gap-1 mt-1">
                               {product.quality_standards.map((standard, index) => (
                                 <Badge key={index} variant="outline" className="text-xs">
@@ -288,7 +290,7 @@ export default function ProductsTab({ products, seasons, onUpdateProducts }: Pro
                         )}
                         {product.certifications.length > 0 && (
                           <div>
-                            <label className="text-sm font-medium text-muted-foreground">Chứng nhận</label>
+                            <label className="text-sm font-medium text-muted-foreground">{t('dashboard.products.certifications')}</label>
                             <div className="flex flex-wrap gap-1 mt-1">
                               {product.certifications.map((cert, index) => (
                                 <Badge key={index} variant="outline" className="text-xs">
@@ -304,23 +306,23 @@ export default function ProductsTab({ products, seasons, onUpdateProducts }: Pro
                     
                     {product.description && (
                       <div className="mb-4">
-                        <label className="text-sm font-medium text-muted-foreground">Mô tả</label>
+                        <label className="text-sm font-medium text-muted-foreground">{t('dashboard.products.description')}</label>
                         <p className="text-sm">{product.description}</p>
                       </div>
                     )}
 
                     {product.season_id && (
                       <div className="mb-4">
-                        <label className="text-sm font-medium text-muted-foreground">Mùa vụ</label>
+                        <label className="text-sm font-medium text-muted-foreground">{t('dashboard.products.season')}</label>
                         <p className="text-sm">
-                          {seasons && seasons.find(s => s.id === product.season_id)?.season_name || 'Không xác định'}
+                          {seasons && seasons.find(s => s.id === product.season_id)?.season_name || t('dashboard.products.unknown')}
                         </p>
                       </div>
                     )}
 
                     {product.expiry_date && (
                       <div className="mb-4">
-                        <label className="text-sm font-medium text-muted-foreground">Hạn sử dụng</label>
+                        <label className="text-sm font-medium text-muted-foreground">{t('dashboard.products.expiry')}</label>
                         <p className="text-sm">{new Date(product.expiry_date).toLocaleDateString('vi-VN')}</p>
                       </div>
                     )}
@@ -331,10 +333,10 @@ export default function ProductsTab({ products, seasons, onUpdateProducts }: Pro
           ) : (
             <div className="text-center py-8">
               <Package className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground mb-4">Chưa có sản phẩm nào</p>
+              <p className="text-muted-foreground mb-4">{t('dashboard.products.noProducts')}</p>
               <Button className="bg-agro-green hover:bg-agro-dark" onClick={() => setIsProductModalOpen(true)}>
                 <Plus className="w-4 h-4 mr-2" />
-                Tạo sản phẩm đầu tiên
+                {t('dashboard.products.addFirstProduct')}
               </Button>
             </div>
           )}
@@ -345,9 +347,9 @@ export default function ProductsTab({ products, seasons, onUpdateProducts }: Pro
       <Dialog open={isProductModalOpen} onOpenChange={setIsProductModalOpen}>
         <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>Tạo sản phẩm nông sản</DialogTitle>
+            <DialogTitle>{t('dashboard.products.createProduct')}</DialogTitle>
             <DialogDescription>
-              Khai báo tên, khối lượng, vùng trồng, tiêu chuẩn chất lượng
+              {t('dashboard.products.createProductDesc')}
             </DialogDescription>
           </DialogHeader>
           

@@ -138,18 +138,18 @@ export default function PartnerSuggestionsTab({ userRole }: PartnerSuggestionsTa
         <div>
           <h2 className="text-2xl font-bold text-foreground flex items-center gap-2">
             <Users className="w-6 h-6" />
-            Gợi ý đối tác
+            {t('dashboard.partners.title')}
           </h2>
           <p className="text-muted-foreground mt-1">
             {userRole === 'farmer' 
-              ? 'Tìm kiếm doanh nghiệp phù hợp với sản phẩm của bạn'
-              : 'Tìm kiếm nông dân có sản phẩm phù hợp'
+              ? t('dashboard.partners.farmerDesc')
+              : t('dashboard.partners.businessDesc')
             }
           </p>
         </div>
         <Button onClick={loadSuggestions} disabled={loading}>
           <Search className="w-4 h-4 mr-2" />
-          {loading ? 'Đang tìm...' : 'Tìm kiếm'}
+          {loading ? t('dashboard.partners.searching') : t('dashboard.partners.search')}
         </Button>
       </div>
 
@@ -158,20 +158,20 @@ export default function PartnerSuggestionsTab({ userRole }: PartnerSuggestionsTa
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Filter className="w-5 h-5" />
-            Bộ lọc tìm kiếm
+            {t('dashboard.partners.searchFilters')}
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Product Types */}
             <div className="space-y-2">
-              <Label>Loại sản phẩm</Label>
+              <Label>{t('dashboard.partners.productType')}</Label>
               <Select 
                 value={filters.product_types.join(',')} 
                 onValueChange={(value) => handleFilterChange('product_types', value ? value.split(',') : [])}
               >
                 <SelectTrigger>
-                  <SelectValue placeholder="Chọn loại sản phẩm" />
+                  <SelectValue placeholder={t('dashboard.partners.selectProductType')} />
                 </SelectTrigger>
                 <SelectContent>
                   {productTypes.map(type => (
@@ -198,7 +198,7 @@ export default function PartnerSuggestionsTab({ userRole }: PartnerSuggestionsTa
 
             {/* Max Distance */}
             <div className="space-y-2">
-              <Label>Khoảng cách tối đa: {filters.max_distance}km</Label>
+              <Label>{t('dashboard.partners.distance')}: {filters.max_distance}{t('dashboard.partners.km')}</Label>
               <Slider
                 value={[filters.max_distance]}
                 onValueChange={(value) => handleFilterChange('max_distance', value[0])}
@@ -265,9 +265,9 @@ export default function PartnerSuggestionsTab({ userRole }: PartnerSuggestionsTa
           <Card>
             <CardContent className="text-center py-8">
               <Users className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Không tìm thấy đối tác phù hợp</h3>
+              <h3 className="text-lg font-semibold mb-2">{t('dashboard.partners.noPartners')}</h3>
               <p className="text-muted-foreground">
-                Hãy thử điều chỉnh bộ lọc để tìm kiếm rộng hơn
+                {t('dashboard.partners.adjustFilters')}
               </p>
             </CardContent>
           </Card>

@@ -25,12 +25,17 @@ export function ThemeSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="gap-2 w-auto min-w-[40px] h-9 px-2 flex-shrink-0">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="gap-2 w-auto min-w-[40px] h-9 px-2 flex-shrink-0"
+          aria-label={currentTheme.label}
+          title={currentTheme.label}
+        >
           <CurrentIcon className="h-4 w-4 flex-shrink-0" />
-          <span className="hidden sm:inline text-sm">{currentTheme.label}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-40">
+      <DropdownMenuContent align="end" className="w-28">
         {themes.map((themeOption) => {
           const Icon = themeOption.icon;
           return (
@@ -38,9 +43,10 @@ export function ThemeSwitcher() {
               key={themeOption.value}
               onClick={() => setTheme(themeOption.value)}
               className="cursor-pointer"
+              title={themeOption.label}
             >
               <Icon className="mr-2 h-4 w-4" />
-              {themeOption.label}
+              {/* Text hidden as per request */}
             </DropdownMenuItem>
           );
         })}

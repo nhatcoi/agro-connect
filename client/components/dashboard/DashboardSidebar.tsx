@@ -63,18 +63,18 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({
   const sidebarItems: SidebarItem[] = [
     {
       id: 'general',
-      label: 'Thông tin chung',
+      label: t('dashboard.sidebar.general'),
       icon: <Home className="w-4 h-4" />,
       children: [
         {
           id: 'profile',
-          label: 'Hồ sơ cá nhân',
+          label: t('dashboard.sidebar.profile'),
           icon: <User className="w-4 h-4" />,
           href: '/me/profile'
         },
         {
           id: 'esg',
-          label: 'Xác thực ESG',
+          label: t('dashboard.sidebar.esg'),
           icon: <Shield className="w-4 h-4" />,
           href: '/me/esg'
         }
@@ -86,36 +86,36 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({
   if (userRole === 'farmer') {
     sidebarItems.push({
       id: 'farmer',
-      label: 'Phân hệ nông dân',
+      label: t('dashboard.sidebar.farmer'),
       icon: <Sprout className="w-4 h-4" />,
       children: [
         {
           id: 'seasons',
-          label: 'Mùa vụ',
+          label: t('dashboard.sidebar.seasons'),
           icon: <Sprout className="w-4 h-4" />,
           href: '/me/seasons'
         },
         {
           id: 'images',
-          label: 'Hình ảnh thực địa',
+          label: t('dashboard.sidebar.images'),
           icon: <Image className="w-4 h-4" />,
           href: '/me/images'
         },
         {
           id: 'products',
-          label: 'Sản phẩm nông sản',
+          label: t('dashboard.sidebar.products'),
           icon: <Package className="w-4 h-4" />,
           href: '/me/products'
         },
         {
           id: 'partners',
-          label: 'Gợi ý đối tác',
+          label: t('dashboard.sidebar.partners'),
           icon: <Users className="w-4 h-4" />,
           href: '/me/partners'
         },
         {
           id: 'orders',
-          label: 'Theo dõi đơn hàng',
+          label: t('dashboard.sidebar.orders'),
           icon: <ShoppingCart className="w-4 h-4" />,
           href: '/me/orders'
         }
@@ -127,7 +127,7 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({
   if (userRole === 'business') {
     sidebarItems.push({
       id: 'business',
-      label: 'Phân hệ doanh nghiệp',
+      label: t('dashboard.sidebar.business'),
       icon: <Package className="w-4 h-4" />,
       children: [
         {
@@ -150,13 +150,13 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({
         },
         {
           id: 'partners',
-          label: 'Gợi ý đối tác',
+          label: t('dashboard.sidebar.partners'),
           icon: <Users className="w-4 h-4" />,
           href: '/me/partners'
         },
         {
           id: 'orders',
-          label: 'Theo dõi đơn hàng',
+          label: t('dashboard.sidebar.orders'),
           icon: <ShoppingCart className="w-4 h-4" />,
           href: '/me/orders'
         }
@@ -168,12 +168,12 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({
   if (userRole === 'esg_expert') {
     sidebarItems.push({
       id: 'esg_expert',
-      label: 'Phân hệ chuyên gia ESG',
+      label: t('dashboard.sidebar.esgExpert'),
       icon: <Shield className="w-4 h-4" />,
       children: [
         {
           id: 'review',
-          label: 'Duyệt ESG',
+          label: t('dashboard.sidebar.review'),
           icon: <Shield className="w-4 h-4" />,
           href: '/me/review'
         }
@@ -182,9 +182,9 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({
   }
 
   // Add activity tab for all users
-  sidebarItems.push(    {
+  sidebarItems.push({
       id: 'activity',
-      label: 'Hoạt động',
+      label: t('dashboard.sidebar.activity'),
       icon: <Activity className="w-4 h-4" />,
       href: '/me/activity'
     });
@@ -192,30 +192,30 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({
   // Traceability group (real entries + WIP entries)
   sidebarItems.push({
     id: 'trace',
-    label: 'Truy xuất nguồn gốc',
+    label: t('dashboard.sidebar.traceability'),
     icon: <Shield className="w-4 h-4" />,
     children: [
       {
         id: 'qr-generate',
-        label: 'Sinh mã QR sản phẩm',
+        label: t('dashboard.sidebar.qrGenerate'),
         icon: <ClipboardList className="w-4 h-4" />,
         href: '/qr-demo'
       },
       {
         id: 'trace-data',
-        label: 'Dữ liệu truy xuất',
+        label: t('dashboard.sidebar.traceData'),
         icon: <ClipboardList className="w-4 h-4" />,
         href: '/traceability/1'
       },
       {
         id: 'trace-journey',
-        label: 'Hành trình From Farm to Table',
+        label: t('dashboard.sidebar.traceJourney'),
         icon: <ClipboardList className="w-4 h-4" />,
         href: '/qr-demo'
       },
       {
         id: 'uc-33',
-        label: 'Bảo toàn dữ liệu (Blockchain)',
+        label: t('dashboard.sidebar.blockchainData'),
         icon: <Shield className="w-4 h-4" />,
         href: '/wip?title=UC-33%20%E2%80%93%20T%C3%ADnh%20n%C4%83ng%20%C4%91ang%20ph%C3%A1t%20tri%E1%BB%83n&desc=Blockchain%20%C4%91%E1%BA%A3m%20b%E1%BA%A3o%20t%C3%ADnh%20to%C3%A0n%20v%E1%BA%B9n'
       }
@@ -225,7 +225,7 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({
   // ESG Certificate quick access
   sidebarItems.push({
     id: 'esg_certificate',
-    label: 'Chứng nhận ESG',
+    label: t('dashboard.sidebar.esgCertificate'),
     icon: <Shield className="w-4 h-4" />,
     href: '/wip?title=UC-44%20%E2%80%93%20T%C3%ADnh%20n%C4%83ng%20%C4%91ang%20ph%C3%A1t%20tri%E1%BB%83n&desc=Sinh%20PDF%20v%C3%A0%20m%C3%A3%20%C4%91%E1%BB%8Bnh%20danh%20Blockchain'
   });
@@ -233,30 +233,30 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({
   // Market & Training group
   sidebarItems.push({
     id: 'market_training',
-    label: 'Thị trường & Đào tạo',
+    label: t('dashboard.sidebar.marketTraining'),
     icon: <Activity className="w-4 h-4" />,
     children: [
       {
         id: 'uc-50',
-        label: 'Khóa học ESG trực tuyến',
+        label: t('dashboard.sidebar.esgCourses'),
         icon: <BookOpen className="w-4 h-4" />,
         href: '/wip?title=UC-50%20%E2%80%93%20T%C3%ADnh%20n%C4%83ng%20%C4%91ang%20ph%C3%A1t%20tri%E1%BB%83n&desc=Kho%20h%E1%BB%8Dc%20li%E1%BB%87u%20v%C3%A0%20kh%C3%B3a%20h%E1%BB%8Dc%20ESG'
       },
       {
         id: 'uc-51',
-        label: 'Bảng giá thị trường',
+        label: t('dashboard.sidebar.marketPrices'),
         icon: <Activity className="w-4 h-4" />,
         href: '/wip?title=UC-51%20%E2%80%93%20T%C3%ADnh%20n%C4%83ng%20%C4%91ang%20ph%C3%A1t%20tri%E1%BB%83n&desc=B%E1%BA%A3ng%20gi%C3%A1%20n%C3%B4ng%20s%E1%BA%A3n%20theo%20v%C3%B9ng'
       },
       {
         id: 'uc-52',
-        label: 'Gợi ý mùa vụ tối ưu',
+        label: t('dashboard.sidebar.seasonSuggestions'),
         icon: <Sprout className="w-4 h-4" />,
         href: '/wip?title=UC-52%20%E2%80%93%20T%C3%ADnh%20n%C4%83ng%20%C4%91ang%20ph%C3%A1t%20tri%E1%BB%83n&desc=AI%20%C4%91%E1%BB%81%20xu%E1%BA%A5t%20m%C3%B9a%20v%E1%BB%A5%20ph%C3%B9%20h%E1%BB%A3p'
       },
       {
         id: 'uc-53',
-        label: 'Diễn đàn cộng đồng',
+        label: t('dashboard.sidebar.communityForum'),
         icon: <Users className="w-4 h-4" />,
         href: '/wip?title=UC-53%20%E2%80%93%20T%C3%ADnh%20n%C4%83ng%20%C4%91ang%20ph%C3%A1t%20tri%E1%BB%83n&desc=C%E1%BB%99ng%20%C4%91%E1%BB%93ng%20h%E1%BB%8Fi%20%E2%80%93%20%C4%91%C3%A1p%20c%C3%B9ng%20chuy%C3%AAn%20gia'
       }
@@ -328,7 +328,7 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({
             AgroConnect
           </h2>
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            Dashboard
+            {t('dashboard.title')}
           </p>
         </div>
 

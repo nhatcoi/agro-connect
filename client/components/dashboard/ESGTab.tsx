@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Shield, CheckCircle, Clock, XCircle } from 'lucide-react';
@@ -20,16 +21,18 @@ interface ESGTabProps {
 }
 
 export default function ESGTab({ esgVerification }: ESGTabProps) {
+  const { t } = useTranslation();
+  
   const getESGStatusBadge = (status: string) => {
     switch (status) {
       case 'approved':
-        return <Badge className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />Đã duyệt</Badge>;
+        return <Badge className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />{t('dashboard.esg.verified')}</Badge>;
       case 'rejected':
-        return <Badge variant="destructive"><XCircle className="w-3 h-3 mr-1" />Từ chối</Badge>;
+        return <Badge variant="destructive"><XCircle className="w-3 h-3 mr-1" />{t('dashboard.esg.rejected')}</Badge>;
       case 'pending':
-        return <Badge variant="secondary"><Clock className="w-3 h-3 mr-1" />Chờ duyệt</Badge>;
+        return <Badge variant="secondary"><Clock className="w-3 h-3 mr-1" />{t('dashboard.esg.pending')}</Badge>;
       default:
-        return <Badge variant="outline">Chưa xác thực</Badge>;
+        return <Badge variant="outline">{t('dashboard.esg.notVerified')}</Badge>;
     }
   };
 
@@ -39,10 +42,10 @@ export default function ESGTab({ esgVerification }: ESGTabProps) {
         <CardHeader>
           <CardTitle className="flex items-center">
             <Shield className="w-5 h-5 mr-2" />
-            Xác thực ESG
+            {t('dashboard.esg.title')}
           </CardTitle>
           <CardDescription>
-            Trạng thái xác thực ESG của bạn
+            {t('dashboard.esg.status')}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -88,16 +91,14 @@ export default function ESGTab({ esgVerification }: ESGTabProps) {
 
               <div className="pt-4 border-t">
                 <p className="text-sm text-muted-foreground">
-                  ESG (Environmental, Social, Governance) là bộ tiêu chuẩn đánh giá 
-                  tác động môi trường, xã hội và quản trị của doanh nghiệp. 
-                  Việc xác thực ESG giúp tăng uy tín và minh bạch trong hoạt động kinh doanh.
+                  {t('dashboard.esg.description')}
                 </p>
               </div>
             </div>
           ) : (
             <div className="text-center py-8">
               <Shield className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">Chưa có yêu cầu xác thực ESG</p>
+              <p className="text-muted-foreground">{t('dashboard.esg.noRequest')}</p>
             </div>
           )}
         </CardContent>

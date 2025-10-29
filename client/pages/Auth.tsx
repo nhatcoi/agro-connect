@@ -132,27 +132,27 @@ export default function Auth() {
               AgroConnect
             </CardTitle>
             <CardDescription>
-              {isLogin ? 'Đăng nhập vào tài khoản' : 'Tạo tài khoản mới'}
+              {isLogin ? t('auth.loginSubtitle') : t('auth.registerSubtitle')}
             </CardDescription>
           </CardHeader>
           
           <CardContent>
             <Tabs value={isLogin ? 'login' : 'register'} onValueChange={(value) => setIsLogin(value === 'login')}>
               <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="login">Đăng nhập</TabsTrigger>
-                <TabsTrigger value="register">Đăng ký</TabsTrigger>
+                <TabsTrigger value="login">{t('auth.loginTab')}</TabsTrigger>
+                <TabsTrigger value="register">{t('auth.registerTab')}</TabsTrigger>
               </TabsList>
 
               <TabsContent value="login">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="login-email">Email</Label>
+                    <Label htmlFor="login-email">{t('auth.email')}</Label>
                     <div className="relative">
                       <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
                         id="login-email"
                         type="email"
-                        placeholder="Nhập email"
+                        placeholder={t('auth.emailPlaceholder')}
                         value={formData.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
                         className="pl-10"
@@ -162,13 +162,13 @@ export default function Auth() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="login-password">Mật khẩu</Label>
+                    <Label htmlFor="login-password">{t('auth.password')}</Label>
                     <div className="relative">
                       <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
                         id="login-password"
                         type={showPassword ? 'text' : 'password'}
-                        placeholder="Nhập mật khẩu"
+                        placeholder={t('auth.passwordPlaceholder')}
                         value={formData.password}
                         onChange={(e) => handleInputChange('password', e.target.value)}
                         className="pl-10 pr-10"
@@ -185,7 +185,7 @@ export default function Auth() {
                   </div>
 
                   <Button type="submit" className="w-full bg-agro-green hover:bg-agro-dark" disabled={loading}>
-                    {loading ? 'Đang xử lý...' : 'Đăng nhập'}
+                    {loading ? t('auth.processing') : t('auth.loginAction')}
                   </Button>
                 </form>
               </TabsContent>
@@ -193,13 +193,13 @@ export default function Auth() {
               <TabsContent value="register">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="register-name">Họ và tên</Label>
+                    <Label htmlFor="register-name">{t('auth.fullName')}</Label>
                     <div className="relative">
                       <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
                         id="register-name"
                         type="text"
-                        placeholder="Nhập họ và tên"
+                        placeholder={t('auth.fullNamePlaceholder')}
                         value={formData.full_name}
                         onChange={(e) => handleInputChange('full_name', e.target.value)}
                         className="pl-10"
@@ -209,13 +209,13 @@ export default function Auth() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="register-email">Email</Label>
+                    <Label htmlFor="register-email">{t('auth.email')}</Label>
                     <div className="relative">
                       <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
                         id="register-email"
                         type="email"
-                        placeholder="Nhập email"
+                        placeholder={t('auth.emailPlaceholder')}
                         value={formData.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
                         className="pl-10"
@@ -225,13 +225,13 @@ export default function Auth() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="register-phone">Số điện thoại (tùy chọn)</Label>
+                    <Label htmlFor="register-phone">{t('auth.phoneOptional')}</Label>
                     <div className="relative">
                       <Phone className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
                         id="register-phone"
                         type="tel"
-                        placeholder="Nhập số điện thoại"
+                        placeholder={t('auth.phonePlaceholder')}
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
                         className="pl-10"
@@ -240,28 +240,28 @@ export default function Auth() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="register-role">Vai trò</Label>
+                    <Label htmlFor="register-role">{t('auth.role')}</Label>
                     <Select value={formData.role} onValueChange={(value: any) => handleInputChange('role', value)}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Chọn vai trò" />
+                        <SelectValue placeholder={t('auth.rolePlaceholder')} />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="farmer">Nông dân</SelectItem>
-                        <SelectItem value="business">Doanh nghiệp</SelectItem>
-                        <SelectItem value="consumer">Người tiêu dùng</SelectItem>
-                        <SelectItem value="esg_expert">Chuyên gia ESG</SelectItem>
+                        <SelectItem value="farmer">{t('roles.farmer')}</SelectItem>
+                        <SelectItem value="business">{t('roles.business')}</SelectItem>
+                        <SelectItem value="consumer">{t('roles.consumer')}</SelectItem>
+                        <SelectItem value="esg_expert">{t('roles.esg_expert')}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="register-password">Mật khẩu</Label>
+                    <Label htmlFor="register-password">{t('auth.password')}</Label>
                     <div className="relative">
                       <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
                         id="register-password"
                         type={showPassword ? 'text' : 'password'}
-                        placeholder="Nhập mật khẩu"
+                        placeholder={t('auth.passwordPlaceholder')}
                         value={formData.password}
                         onChange={(e) => handleInputChange('password', e.target.value)}
                         className="pl-10 pr-10"
@@ -278,13 +278,13 @@ export default function Auth() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="register-confirm-password">Xác nhận mật khẩu</Label>
+                    <Label htmlFor="register-confirm-password">{t('auth.confirmPassword')}</Label>
                     <div className="relative">
                       <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input
                         id="register-confirm-password"
                         type={showPassword ? 'text' : 'password'}
-                        placeholder="Nhập lại mật khẩu"
+                        placeholder={t('auth.confirmPasswordPlaceholder')}
                         value={formData.confirmPassword}
                         onChange={(e) => handleInputChange('confirmPassword', e.target.value)}
                         className="pl-10"
@@ -294,7 +294,7 @@ export default function Auth() {
                   </div>
 
                   <Button type="submit" className="w-full bg-agro-green hover:bg-agro-dark" disabled={loading}>
-                    {loading ? 'Đang xử lý...' : 'Đăng ký'}
+                    {loading ? t('auth.processing') : t('auth.registerAction')}
                   </Button>
                 </form>
               </TabsContent>

@@ -25,7 +25,7 @@ export default function Documentation() {
 
   const onDocumentLoadError = (error: Error) => {
     console.error('PDF load error:', error);
-    setError('Không thể tải tài liệu PDF. Vui lòng thử lại sau.');
+    setError(t('docs.loadError'));
   };
 
   const goToPrevPage = () => {
@@ -67,20 +67,20 @@ export default function Documentation() {
                 className="flex items-center space-x-2"
               >
                 <ArrowLeft className="h-4 w-4" />
-                <span>Quay lại</span>
+                <span>{t('common.back')}</span>
               </Button>
               <div>
                 <h1 className={`text-2xl font-bold ${getFontFamily('heading')}`}>
-                  Tài liệu AgroConnect
+                  {t('docs.title')}
                 </h1>
                 <p className="text-muted-foreground">
-                  Hướng dẫn sử dụng và tài liệu kỹ thuật
+                  {t('docs.subtitle')}
                 </p>
               </div>
             </div>
             <Button onClick={downloadPDF} className="flex items-center space-x-2">
               <Download className="h-4 w-4" />
-              <span>Tải xuống PDF</span>
+              <span>{t('docs.download')}</span>
             </Button>
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function Documentation() {
                 <ChevronLeft className="h-4 w-4" />
               </Button>
               <span className="text-sm font-medium">
-                Trang {pageNumber} / {numPages}
+                {t('docs.pageXofY', { page: pageNumber, total: numPages })}
               </span>
               <Button
                 variant="outline"
@@ -148,10 +148,10 @@ export default function Documentation() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Lỗi tải tài liệu</h3>
+                <h3 className="text-lg font-semibold mb-2">{t('docs.loadErrorTitle')}</h3>
                 <p className="text-muted-foreground mb-4">{error}</p>
                 <Button onClick={() => window.location.reload()}>
-                  Thử lại
+                  {t('common.retry')}
                 </Button>
               </div>
             ) : (
@@ -162,7 +162,7 @@ export default function Documentation() {
                 loading={
                   <div className="p-8 text-center">
                     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-agro-green mx-auto mb-4"></div>
-                    <p className="text-muted-foreground">Đang tải tài liệu...</p>
+                    <p className="text-muted-foreground">{t('docs.loading')}</p>
                   </div>
                 }
               >
@@ -182,10 +182,10 @@ export default function Documentation() {
         <div className="container mx-auto px-4 py-6">
           <div className="text-center text-sm text-muted-foreground">
             <p>
-              Tài liệu AgroConnect - Nền tảng kết nối nông nghiệp bền vững
+              {t('docs.footerLine')}
             </p>
             <p className="mt-1">
-              Phiên bản 1.0.0 | Cập nhật lần cuối: {new Date().toLocaleDateString('vi-VN')}
+              {t('docs.versionLine', { version: '1.0.0', date: new Date().toLocaleDateString() })}
             </p>
           </div>
         </div>

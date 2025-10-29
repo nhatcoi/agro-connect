@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -6,7 +7,9 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { User, MapPin, Award, Edit } from 'lucide-react';
+import { User, MapPin, Award, Edit, Settings } from 'lucide-react';
+import { ThemeSwitcher } from '@/components/ThemeSwitcher';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 interface UserData {
   id: number;
@@ -37,6 +40,7 @@ interface ProfileTabProps {
 }
 
 export default function ProfileTab({ user, profile, onUpdateProfile }: ProfileTabProps) {
+  const { t } = useTranslation();
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [editForm, setEditForm] = useState({
     full_name: user.full_name,
@@ -89,26 +93,20 @@ export default function ProfileTab({ user, profile, onUpdateProfile }: ProfileTa
       });
 
       if (userResponse.ok && profileResponse.ok) {
-        onUpdateProfile();
+        onUpdateProfile(profile!);
         setIsEditModalOpen(false);
-        alert('Cập nhật thông tin thành công!');
+        alert(t('dashboard.profile.updateSuccess'));
       } else {
-        alert('Có lỗi xảy ra khi cập nhật thông tin');
+        alert(t('dashboard.profile.updateError'));
       }
     } catch (error) {
       console.error('Update profile error:', error);
-      alert('Có lỗi xảy ra');
+      alert(t('dashboard.profile.errorOccurred'));
     }
   };
 
   const getRoleLabel = (role: string) => {
-    const roleLabels: { [key: string]: string } = {
-      farmer: 'Nông dân',
-      business: 'Doanh nghiệp',
-      consumer: 'Người tiêu dùng',
-      esg_expert: 'Chuyên gia ESG'
-    };
-    return roleLabels[role] || role;
+    return t(`dashboard.profile.roles.${role}`) || role;
   };
 
   return (
@@ -120,15 +118,15 @@ export default function ProfileTab({ user, profile, onUpdateProfile }: ProfileTa
             <div>
               <CardTitle className="flex items-center">
                 <User className="w-5 h-5 mr-2" />
-                Thông tin cá nhân
+                {t('dashboard.profile.personalInfo')}
               </CardTitle>
               <CardDescription>
-                Thông tin cơ bản và vai trò của bạn
+                {t('dashboard.profile.personalInfoDesc')}
               </CardDescription>
             </div>
             <Button variant="outline" onClick={() => setIsEditModalOpen(true)}>
               <Edit className="w-4 h-4 mr-2" />
-              Chỉnh sửa thông tin
+              {t('dashboard.profile.editInfo')}
             </Button>
           </div>
         </CardHeader>
@@ -136,21 +134,21 @@ export default function ProfileTab({ user, profile, onUpdateProfile }: ProfileTa
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div>
-                <label className="text-sm font-medium text-muted-foreground">Họ và tên</label>
+                <label className="text-sm font-medium text-muted-foreground">{t('dashboard.profile.fullName')}</label>
                 <p className="text-lg font-semibold">{user.full_name}</p>
               </div>
               <div>
-                <label className="text-sm font-medium text-muted-foreground">Email</label>
+                <label className="text-sm font-medium text-muted-foreground">{t('dashboard.profile.email')}</label>
                 <p className="text-lg">{user.email}</p>
               </div>
               <div>
-                <label className="text-sm font-medium text-muted-foreground">Số điện thoại</label>
-                <p className="text-lg">{user.phone || 'Chưa cập nhật'}</p>
+                <label className="text-sm font-medium text-muted-foreground">{t('dashboard.profile.phone')}</label>
+                <p className="text-lg">{user.phone || t('dashboard.profile.notUpdated')}</p>
               </div>
             </div>
             <div className="space-y-4">
               <div>
-                <label className="text-sm font-medium text-muted-foreground">Vai trò</label>
+                <label className="text-sm font-medium text-muted-foreground">{t('dashboard.profile.role')}</label>
                 <div className="mt-1">
                   <Badge className="bg-agro-green text-white">
                     {getRoleLabel(user.role)}
@@ -158,9 +156,9 @@ export default function ProfileTab({ user, profile, onUpdateProfile }: ProfileTa
                 </div>
               </div>
               <div>
-                <label className="text-sm font-medium text-muted-foreground">Trạng thái tài khoản</label>
+                <label className="text-sm font-medium text-muted-foreground">{t('dashboard.profile.accountStatus')}</label>
                 <div className="mt-1">
-                  <Badge variant="outline">Hoạt động</Badge>
+                  <Badge variant="outline">{t('dashboard.profile.active')}</Badge>
                 </div>
               </div>
             </div>
@@ -174,29 +172,29 @@ export default function ProfileTab({ user, profile, onUpdateProfile }: ProfileTa
           <CardHeader>
             <CardTitle className="flex items-center">
               <MapPin className="w-5 h-5 mr-2" />
-              Thông tin bổ sung
+              {t('dashboard.profile.additionalInfo')}
             </CardTitle>
             <CardDescription>
-              Thông tin chi tiết về hồ sơ của bạn
+              {t('dashboard.profile.additionalInfoDesc')}
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               {profile.bio && (
                 <div>
-                  <label className="text-sm font-medium text-muted-foreground">Giới thiệu</label>
+                  <label className="text-sm font-medium text-muted-foreground">{t('dashboard.profile.bio')}</label>
                   <p className="text-sm mt-1">{profile.bio}</p>
                 </div>
               )}
               {profile.address && (
                 <div>
-                  <label className="text-sm font-medium text-muted-foreground">Địa chỉ</label>
+                  <label className="text-sm font-medium text-muted-foreground">{t('dashboard.profile.address')}</label>
                   <p className="text-sm mt-1">{profile.address}</p>
                 </div>
               )}
               {profile.certifications && profile.certifications.length > 0 && (
                 <div>
-                  <label className="text-sm font-medium text-muted-foreground">Chứng chỉ</label>
+                  <label className="text-sm font-medium text-muted-foreground">{t('dashboard.profile.certifications')}</label>
                   <div className="flex flex-wrap gap-2 mt-1">
                     {profile.certifications.map((cert, index) => (
                       <Badge key={index} variant="outline">
@@ -209,7 +207,7 @@ export default function ProfileTab({ user, profile, onUpdateProfile }: ProfileTa
               )}
               {profile.social_links && Object.keys(profile.social_links).length > 0 && (
                 <div>
-                  <label className="text-sm font-medium text-muted-foreground">Liên kết mạng xã hội</label>
+                  <label className="text-sm font-medium text-muted-foreground">{t('dashboard.profile.socialLinks')}</label>
                   <div className="space-y-1 mt-1">
                     {Object.entries(profile.social_links).map(([platform, url]) => (
                       <div key={platform} className="text-sm">
@@ -224,47 +222,80 @@ export default function ProfileTab({ user, profile, onUpdateProfile }: ProfileTa
         </Card>
       )}
 
+      {/* Settings Card */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center">
+            <Settings className="w-5 h-5 mr-2" />
+            {t('dashboard.settings')}
+          </CardTitle>
+          <CardDescription>
+            {t('dashboard.settingsDescription')}
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-4">
+              <div>
+                <label className="text-sm font-medium text-muted-foreground">{t('dashboard.theme')}</label>
+                <div className="mt-2">
+                  <ThemeSwitcher />
+                </div>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div>
+                <label className="text-sm font-medium text-muted-foreground">{t('dashboard.language')}</label>
+                <div className="mt-2">
+                  <LanguageSwitcher />
+                </div>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Edit Profile Modal */}
       <Dialog open={isEditModalOpen} onOpenChange={setIsEditModalOpen}>
         <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>Chỉnh sửa thông tin cá nhân</DialogTitle>
+            <DialogTitle>{t('dashboard.profile.editPersonalInfo')}</DialogTitle>
             <DialogDescription>
-              Cập nhật thông tin cá nhân và hồ sơ của bạn
+              {t('dashboard.profile.editPersonalInfoDesc')}
             </DialogDescription>
           </DialogHeader>
           
           <div className="space-y-6">
             {/* Basic Info */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Thông tin cơ bản</h3>
+              <h3 className="text-lg font-semibold">{t('dashboard.profile.basicInfo')}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="full_name">Họ và tên</Label>
+                  <Label htmlFor="full_name">{t('dashboard.profile.fullName')}</Label>
                   <Input
                     id="full_name"
                     value={editForm.full_name}
                     onChange={(e) => handleEditFormChange('full_name', e.target.value)}
-                    placeholder="Nhập họ và tên"
+                    placeholder={t('dashboard.profile.enterFullName')}
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email">{t('dashboard.profile.email')}</Label>
                   <Input
                     id="email"
                     type="email"
                     value={editForm.email}
                     onChange={(e) => handleEditFormChange('email', e.target.value)}
-                    placeholder="Nhập email"
+                    placeholder={t('dashboard.profile.enterEmail')}
                   />
                 </div>
                 <div>
-                  <Label htmlFor="phone">Số điện thoại</Label>
+                  <Label htmlFor="phone">{t('dashboard.profile.phone')}</Label>
                   <Input
                     id="phone"
                     value={editForm.phone}
                     onChange={(e) => handleEditFormChange('phone', e.target.value)}
-                    placeholder="Nhập số điện thoại"
+                    placeholder={t('dashboard.profile.enterPhone')}
                   />
                 </div>
               </div>
@@ -272,31 +303,31 @@ export default function ProfileTab({ user, profile, onUpdateProfile }: ProfileTa
 
             {/* Profile Info */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Thông tin bổ sung</h3>
+              <h3 className="text-lg font-semibold">{t('dashboard.profile.additionalInfo')}</h3>
               <div>
-                <Label htmlFor="bio">Giới thiệu</Label>
+                <Label htmlFor="bio">{t('dashboard.profile.bio')}</Label>
                 <Textarea
                   id="bio"
                   value={editForm.bio}
                   onChange={(e) => handleEditFormChange('bio', e.target.value)}
-                  placeholder="Giới thiệu về bản thân..."
+                  placeholder={t('dashboard.profile.bioPlaceholder')}
                   rows={3}
                 />
               </div>
               <div>
-                <Label htmlFor="address">Địa chỉ</Label>
+                <Label htmlFor="address">{t('dashboard.profile.address')}</Label>
                 <Input
                   id="address"
                   value={editForm.address}
                   onChange={(e) => handleEditFormChange('address', e.target.value)}
-                  placeholder="Nhập địa chỉ"
+                  placeholder={t('dashboard.profile.enterAddress')}
                 />
               </div>
             </div>
 
             {/* Social Links */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Liên kết mạng xã hội</h3>
+              <h3 className="text-lg font-semibold">{t('dashboard.profile.socialLinks')}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="facebook">Facebook</Label>
@@ -352,10 +383,10 @@ export default function ProfileTab({ user, profile, onUpdateProfile }: ProfileTa
             {/* Action Buttons */}
             <div className="flex justify-end space-x-2 pt-4 border-t">
               <Button variant="outline" onClick={() => setIsEditModalOpen(false)}>
-                Hủy
+                {t('dashboard.profile.cancel')}
               </Button>
               <Button className="bg-agro-green hover:bg-agro-dark" onClick={handleSaveProfile}>
-                Lưu thay đổi
+                {t('dashboard.profile.saveChanges')}
               </Button>
             </div>
           </div>

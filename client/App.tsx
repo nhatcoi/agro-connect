@@ -20,6 +20,7 @@ import QRDemo from "./pages/QRDemo";
 import DashboardRoutes from "./pages/DashboardRoutes";
 import SidebarDemo from "./pages/SidebarDemo";
 import NotFound from "./pages/NotFound";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const AppContent = () => {
         <Route path="/about" element={<About />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/documentation" element={<Documentation />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/traceability/:productId" element={<Traceability />} />
         <Route path="/qr-demo" element={<QRDemo />} />
         <Route path="/features" element={<Features />} />

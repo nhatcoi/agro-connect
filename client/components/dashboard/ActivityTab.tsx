@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Clock, User, Shield, Calendar, Camera, Upload } from 'lucide-react';
@@ -15,29 +16,31 @@ interface ActivityTabProps {
 }
 
 export default function ActivityTab({ user }: ActivityTabProps) {
+  const { t } = useTranslation();
+  
   // Mock activity data - in real app, this would come from API
   const activities = [
     {
       id: 1,
       type: 'login',
-      title: 'Đăng nhập vào hệ thống',
-      description: 'Bạn đã đăng nhập thành công',
+      title: t('dashboard.activity.login'),
+      description: t('dashboard.activity.loginDesc'),
       timestamp: new Date().toISOString(),
       icon: User
     },
     {
       id: 2,
       type: 'profile_update',
-      title: 'Cập nhật thông tin cá nhân',
-      description: 'Đã cập nhật thông tin hồ sơ',
+      title: t('dashboard.activity.profileUpdate'),
+      description: t('dashboard.activity.profileUpdateDesc'),
       timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
       icon: User
     },
     {
       id: 3,
       type: 'esg_request',
-      title: 'Gửi yêu cầu xác thực ESG',
-      description: 'Đã gửi yêu cầu xác thực ESG',
+      title: t('dashboard.activity.esgRequest'),
+      description: t('dashboard.activity.esgRequestDesc'),
       timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(),
       icon: Shield
     }
@@ -121,10 +124,10 @@ export default function ActivityTab({ user }: ActivityTabProps) {
       <CardHeader>
         <CardTitle className="flex items-center">
           <Clock className="w-5 h-5 mr-2" />
-          Lịch sử hoạt động
+          {t('dashboard.activity.recentActivity')}
         </CardTitle>
         <CardDescription>
-          Các hoạt động gần đây của bạn
+          {t('dashboard.activity.recentActivity')}
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -161,7 +164,7 @@ export default function ActivityTab({ user }: ActivityTabProps) {
         ) : (
           <div className="text-center py-8">
             <Clock className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-            <p className="text-muted-foreground">Chưa có hoạt động nào</p>
+            <p className="text-muted-foreground">{t('dashboard.activity.noActivities')}</p>
           </div>
         )}
       </CardContent>

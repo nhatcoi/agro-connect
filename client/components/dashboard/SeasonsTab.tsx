@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -33,6 +34,7 @@ interface SeasonsTabProps {
 }
 
 export default function SeasonsTab({ seasons, onUpdateSeasons }: SeasonsTabProps) {
+  const { t } = useTranslation();
   const [isSeasonModalOpen, setIsSeasonModalOpen] = useState(false);
   const [seasonForm, setSeasonForm] = useState({
     season_name: '',
@@ -156,15 +158,15 @@ export default function SeasonsTab({ seasons, onUpdateSeasons }: SeasonsTabProps
             <div>
               <CardTitle className="flex items-center">
                 <Calendar className="w-5 h-5 mr-2" />
-                Quản lý mùa vụ
+                {t('dashboard.seasons.manageSeasons')}
               </CardTitle>
               <CardDescription>
-                Ghi lại thông tin canh tác, loại cây trồng, thời gian gieo trồng
+                {t('dashboard.seasons.manageSeasonsDesc')}
               </CardDescription>
             </div>
             <Button className="bg-agro-green hover:bg-agro-dark" onClick={() => setIsSeasonModalOpen(true)}>
               <Plus className="w-4 h-4 mr-2" />
-              Tạo mùa vụ mới
+              {t('dashboard.seasons.addSeason')}
             </Button>
           </div>
         </CardHeader>
@@ -252,10 +254,10 @@ export default function SeasonsTab({ seasons, onUpdateSeasons }: SeasonsTabProps
           ) : (
             <div className="text-center py-8">
               <Calendar className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground mb-4">Chưa có mùa vụ nào</p>
+              <p className="text-muted-foreground mb-4">{t('dashboard.seasons.noSeasons')}</p>
               <Button className="bg-agro-green hover:bg-agro-dark" onClick={() => setIsSeasonModalOpen(true)}>
                 <Plus className="w-4 h-4 mr-2" />
-                Tạo mùa vụ đầu tiên
+                {t('dashboard.seasons.createFirstSeason')}
               </Button>
             </div>
           )}

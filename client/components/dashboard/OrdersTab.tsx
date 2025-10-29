@@ -211,22 +211,22 @@ const OrdersTab: React.FC = () => {
       <div className="flex items-center justify-between">
         <div>
           <h2 className={`text-2xl font-bold ${getFontFamily('heading')}`}>
-            Quản lý đơn hàng
+{t('dashboard.orders.manageOrders')}
           </h2>
           <p className="text-muted-foreground">
-            Theo dõi và quản lý các đơn hàng đang đàm phán hoặc giao dịch
+            {t('dashboard.orders.manageOrdersDesc')}
           </p>
         </div>
         <Dialog open={isCreateDialogOpen} onOpenChange={setIsCreateDialogOpen}>
           <DialogTrigger asChild>
             <Button className="bg-agro-green hover:bg-agro-dark">
               <Plus className="w-4 h-4 mr-2" />
-              Tạo đơn hàng mới
+              {t('dashboard.orders.createOrder')}
             </Button>
           </DialogTrigger>
           <DialogContent className="max-w-2xl">
             <DialogHeader>
-              <DialogTitle>Tạo đơn hàng mới</DialogTitle>
+              <DialogTitle>{t('dashboard.orders.createOrder')}</DialogTitle>
             </DialogHeader>
             <div className="space-y-4">
               <div className="text-center py-8 text-muted-foreground">

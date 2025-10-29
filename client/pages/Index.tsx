@@ -85,7 +85,7 @@ export default function Index() {
                 <ThemeSwitcher />
               </div>
               <Button
-                onClick={() => handleScroll("hero-cta")}
+                onClick={() => navigate('/auth')}
                 className="hidden sm:inline-flex bg-agro-green hover:bg-agro-dark text-white ml-2 flex-shrink-0"
               >
                 {t('nav.joinNow')}
@@ -189,6 +189,7 @@ export default function Index() {
             >
               <Button
                 variant="outline"
+                onClick={() => navigate('/features')}
                 className="border-2 border-agro-green text-agro-green hover:bg-agro-green-light text-base px-8 py-6 rounded-lg h-auto"
               >
                 {t('hero.exploreButton')}
@@ -695,7 +696,7 @@ export default function Index() {
             {t('cta.subtitle')}
           </p>
           <div className="flex justify-center">
-            <button className="animated-button">
+            <button className="animated-button" onClick={() => navigate('/auth')}>
             <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
               <path
                 d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
@@ -741,14 +742,20 @@ export default function Index() {
                       </button>
                     </li>
                     <li>
-                      <a href="#" className="text-white hover:text-agro-orange transition-colors">
+                      <button 
+                        onClick={() => navigate('/blog#esg-policy')}
+                        className="text-white hover:text-agro-orange transition-colors"
+                      >
                         {t('footer.esgPolicy')}
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a href="#" className="text-white hover:text-agro-orange transition-colors">
+                      <button 
+                        onClick={() => navigate('/blog#partners')}
+                        className="text-white hover:text-agro-orange transition-colors"
+                      >
                         {t('footer.partnerships')}
-                      </a>
+                      </button>
                     </li>
                   </ul>
             </div>
@@ -757,19 +764,28 @@ export default function Index() {
               <h4 className={`${getFontFamily('heading')} font-bold mb-4`}>{t('footer.resources')}</h4>
               <ul className={`space-y-2 text-white ${getFontFamily('body')} text-sm`}>
                 <li>
-                  <a href="#" className="text-white hover:text-agro-orange transition-colors">
+                  <button 
+                    onClick={() => navigate('/documentation')}
+                    className="text-white hover:text-agro-orange transition-colors"
+                  >
                     {t('footer.documentation')}
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="text-white hover:text-agro-orange transition-colors">
+                  <button 
+                    onClick={() => navigate('/blog#intro')}
+                    className="text-white hover:text-agro-orange transition-colors"
+                  >
                     {t('footer.blog')}
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="text-white hover:text-agro-orange transition-colors">
+                  <button 
+                    onClick={() => navigate('/blog#other')}
+                    className="text-white hover:text-agro-orange transition-colors"
+                  >
                     {t('footer.support')}
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -779,7 +795,7 @@ export default function Index() {
               <ul className={`space-y-2 text-white ${getFontFamily('body')} text-sm`}>
                 <li>
                   <a
-                    href="mailto:hello@agroconnect.com"
+                    href="mailto:agro.connect@gmail.com"
                     className="text-white hover:text-agro-orange transition-colors"
                   >
                     {t('footer.email')}

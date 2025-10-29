@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import ActivityTab from '@/components/dashboard/ActivityTab';
 
 interface UserData {
@@ -11,6 +12,7 @@ interface UserData {
 }
 
 const ActivityPage: React.FC = () => {
+  const { t } = useTranslation();
   const [user, setUser] = useState<UserData | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -50,10 +52,10 @@ const ActivityPage: React.FC = () => {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-            Không thể tải dữ liệu
+            {t('dashboard.errorLoading')}
           </h2>
           <p className="text-gray-500 dark:text-gray-400">
-            Vui lòng thử lại sau
+            {t('dashboard.tryAgainLater')}
           </p>
         </div>
       </div>
